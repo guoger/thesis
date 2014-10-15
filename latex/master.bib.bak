@@ -1,0 +1,335 @@
+% This file was created with JabRef 2.10b2.
+% Encoding: UTF-8
+
+
+@Book{broadband2013state,
+  Title                    = {The State of Broadband 2013: Universalizing Broadband},
+  Author                   = {Broadband Commission and others},
+  Publisher                = {Broadband Commission},
+  Year                     = {2013},
+
+  File                     = {:/home/guoger/Documents/refs/minor/bb-annualreport2013.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@Article{hargittai2002second,
+  Title                    = {Second-level digital divide: Differences in people's online skills},
+  Author                   = {Hargittai, Eszter},
+  Journal                  = {First monday},
+  Year                     = {2002},
+  Number                   = {4},
+  Volume                   = {7},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@Article{hilbert2014technological,
+  Title                    = {Technological information inequality as an incessantly moving target: The redistribution of information and communication capacities between 1986 and 2010},
+  Author                   = {Hilbert, Martin},
+  Journal                  = {Journal of the Association for Information Science and Technology},
+  Year                     = {2014},
+  Number                   = {4},
+  Pages                    = {821--835},
+  Volume                   = {65},
+
+  File                     = {:/home/guoger/Documents/refs/minor/TechInfoInequality.pdf:PDF},
+  Owner                    = {guoger},
+  Publisher                = {Wiley Online Library},
+  Timestamp                = {2014.10.15}
+}
+
+@Article{hilbert2011mapping,
+  Title                    = {Mapping the dimensions and characteristics of the world’s technological communication capacity during the period of digitization},
+  Author                   = {Hilbert, Martin},
+  Journal                  = {Communication aux 9{\`e}mes Rencontres World Telecommunication/Ict Indicators--{\^I}le Maurice},
+  Year                     = {2011},
+
+  File                     = {:/home/guoger/Documents/refs/minor/Mapping the dimensions and characteristics of the world’s technological communication capacity during the period of digitization (1986 - 2007 2010).pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@TechReport{itufacts2013,
+  Title                    = {ICT Facts and Figures 2013},
+  Author                   = {ITU},
+  Institution              = {International Telecommunication Union},
+  Year                     = {2013},
+
+  File                     = {:/home/guoger/Documents/refs/minor/ICTFactsFigures2013-e.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.13}
+}
+
+@InProceedings{matthee2007bringing,
+  Title                    = {Bringing Internet connectivity to rural Zambia using a collaborative approach},
+  Author                   = {Matthee, KW and Mweemba, Gregory and Pais, AV and Van Stam, Gertjan and Rijken, Marijn},
+  Booktitle                = {Information and Communication Technologies and Development, 2007. ICTD 2007. International Conference on},
+  Year                     = {2007},
+  Organization             = {IEEE},
+  Pages                    = {1--12},
+
+  File                     = {:/home/guoger/Documents/refs/minor/Bringing Internet connectivity to rural Zambia using a collaborative approach.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@Article{nungucase,
+  Title                    = {The Case of Learning by Doing and its Applications in Tanzania},
+  Author                   = {NUNGU, Amos},
+  Year                     = {2013},
+
+  File                     = {:/home/guoger/Documents/refs/minor/The Case of Learning by Doing and its Applications in Tanzania.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@InProceedings{nungu2011business,
+  Title                    = {Business Model for Developing World Municipal Broadband Network-A Case Study},
+  Author                   = {Nungu, Amos and Brown, Terrence and Pehrson, Bj{\"o}rn},
+  Booktitle                = {Global Information Infrastructure Symposium (GIIS), 2011},
+  Year                     = {2011},
+  Organization             = {IEEE},
+  Pages                    = {1--7},
+
+  File                     = {:/home/guoger/Documents/refs/minor/Business Model for Developing World Municipal Broadband Network - A Case Study.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@InCollection{nungu2011challenges,
+  Title                    = {Challenges in sustaining municipal broadband networks in the developing world},
+  Author                   = {Nungu, Amos and Brown, Terrence and Pehrson, Bjorn},
+  Booktitle                = {e-Technologies and Networks for Development},
+  Publisher                = {Springer},
+  Year                     = {2011},
+  Pages                    = {26--40},
+
+  File                     = {:/home/guoger/Documents/refs/minor/Challenges in Sustaining Municipal Broadband Networks in the Developing World.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@Misc{africommpaper,
+  Title                    = {Inclusive Ubiquitous Access Revisited - A Break Through Low-Power Router},
+
+  Author                   = {Nungu, Amos and Olsson, Robert and Guo, Jiannan and Pehrson, Bj{\"o}rn},
+  HowPublished             = {http://www2.pehrson.se/africomm2014/africomm-2014-07-08.pdf},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.13},
+  Url                      = {http://www2.pehrson.se/africomm2014/africomm-2014-07-08.pdf}
+}
+
+@InProceedings{nungu2011powering,
+  Title                    = {On powering communication networks in developing regions},
+  Author                   = {Nungu, Amos and Olsson, Robert and Pehrson, Bj{\"o}rn},
+  Booktitle                = {Computers and Communications (ISCC), 2011 IEEE Symposium on},
+  Year                     = {2011},
+  Organization             = {IEEE},
+  Pages                    = {383--390},
+
+  File                     = {:/home/guoger/Documents/refs/minor/On Powering Communication Networks in Developing Regions.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@InProceedings{nungu2010design,
+  Title                    = {On the design of affordable and green high-performance routers for community networks},
+  Author                   = {Nungu, Amos and Olsson, Robert and Pehrson, Bj{\"o}rn},
+  Booktitle                = {Proceedings of the 4th ACM Workshop on Networked Systems for Developing Regions (NSDR), San Francisco},
+  Year                     = {2010},
+
+  File                     = {:/home/guoger/Documents/refs/minor/On the Design of Affordable and Green High-Performance Routers for Community Networks.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@Article{nunguinclusive,
+  Title                    = {Inclusive Ubiquitous Access-A Status Report},
+  Author                   = {Nungu, Amos and Olsson, Robert and Pehrson, Bj{\"o}rn and Kang, Jiawei and Kifetew, Daniel and Rustamov, Alisher},
+  Year                     = {2012},
+
+  File                     = {:/home/guoger/Documents/refs/minor/Inclusive Ubiquitous Access - A Status Report.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@InProceedings{nungu2007interconnection,
+  Title                    = {Interconnection of broadband islands in developing regions},
+  Author                   = {Nungu, Amos and Pehrson, Bj{\"o}rn and Nungii, A},
+  Booktitle                = {Testbeds and Research Infrastructure for the Development of Networks and Communities, 2007. TridentCom 2007. 3rd International Conference on},
+  Year                     = {2007},
+  Organization             = {IEEE},
+  Pages                    = {1--6},
+
+  File                     = {:/home/guoger/Documents/refs/minor/Interconnection of Broadband Islands in Developing Regions.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@InProceedings{nungu2008serengeti,
+  Title                    = {Serengeti broadband},
+  Author                   = {Nungu, Amos M and Pehrson, Bjorn and Genesis, Nsubis},
+  Booktitle                = {Proceedings of the second ACM SIGCOMM workshop on Networked systems for developing regions},
+  Year                     = {2008},
+  Organization             = {ACM},
+  Pages                    = {37--42},
+
+  File                     = {:/home/guoger/Documents/refs/minor/Serengeti Broadband.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@Book{prahalad2006fortune,
+  Title                    = {The Fortune at the Bottom of the Pyramid},
+  Author                   = {Prahalad, Coimbatore Krishna},
+  Publisher                = {Pearson Education India},
+  Year                     = {2006},
+
+  File                     = {:/home/guoger/Documents/refs/minor/Prahalad_Hart_2001_SB.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@Book{rubin1998foundations,
+  Title                    = {Foundations of Library and Information Science.},
+  Author                   = {Rubin, Richard E},
+  Publisher                = {ERIC},
+  Year                     = {1998},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@Article{van2006digital,
+  Title                    = {Digital divide research, achievements and shortcomings},
+  Author                   = {Van Dijk, Jan AGM},
+  Journal                  = {Poetics},
+  Year                     = {2006},
+  Number                   = {4},
+  Pages                    = {221--235},
+  Volume                   = {34},
+
+  File                     = {:/home/guoger/Documents/refs/minor/Digital divide research, achievements and shortcomings.pdf:PDF},
+  Owner                    = {guoger},
+  Publisher                = {Elsevier},
+  Timestamp                = {2014.10.15}
+}
+
+@Article{van2003digital,
+  Title                    = {The digital divide as a complex and dynamic phenomenon},
+  Author                   = {Van Dijk, Jan and Hacker, Kenneth},
+  Journal                  = {The information society},
+  Year                     = {2003},
+  Number                   = {4},
+  Pages                    = {315--326},
+  Volume                   = {19},
+
+  File                     = {:/home/guoger/Documents/refs/minor/The Digital Divide as a Complex and Dynamic Phenomenon.pdf:PDF},
+  Owner                    = {guoger},
+  Publisher                = {Taylor \& Francis},
+  Timestamp                = {2014.10.15}
+}
+
+@Article{vanier2011world,
+  Title                    = {World Broadband Statistics: Short report Q4 2010},
+  Author                   = {Vanier, Fiona},
+  Journal                  = {Point Topic},
+  Year                     = {2011},
+
+  File                     = {:/home/guoger/Documents/refs/minor/Point-Topic-Global-Broadband-Statistics-Q1-2013.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.15}
+}
+
+@Misc{esrfhealthcare,
+  Title                    = {ESRF Discussion Paper},
+  HowPublished             = {http://esrf.or.tz/docs/ESRFDiscussionPaper36.pdf},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.13},
+  Url                      = {http://esrf.or.tz/docs/ESRFDiscussionPaper36.pdf}
+}
+
+@Misc{macha,
+  Title                    = {Macha Project},
+  HowPublished             = {www.machaworks.org/projecten.html},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.13},
+  Url                      = {www.machaworks.org/projecten.html}
+}
+
+@Misc{odroid,
+  Title                    = {Odroid},
+  HowPublished             = {www.hardkernel.com},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.13}
+}
+
+@Misc{rpi,
+  Title                    = {Raspberry Pi},
+  HowPublished             = {http://www.raspberrypi.org/},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.13},
+  Url                      = {http://www.raspberrypi.org/}
+}
+
+@Misc{tzpppagriculture,
+  Title                    = {Tanzanian southern agricultural growth corridor},
+  HowPublished             = {http://feedthefuture.gov/model/southern-agricultural-growth-corridor-tanzania-sagcot},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.13},
+  Url                      = {http://feedthefuture.gov/model/southern-agricultural-growth-corridor-tanzania-sagcot}
+}
+
+@Misc{tzpppframework,
+  HowPublished             = {http://www.tic.co.tz/menu/314},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.13},
+  Url                      = {http://www.tic.co.tz/menu/314}
+}
+
+@Misc{tzppphealthabott,
+  Title                    = {Mentoring for Health Care in Tanzania},
+  HowPublished             = {http://www.abbottfund.org/project/17/83/Mentoring-for-Health-Care-in-Tanzania},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.13},
+  Url                      = {http://www.abbottfund.org/project/17/83/Mentoring-for-Health-Care-in-Tanzania}
+}
+
+@Misc{tzppppolicy,
+  Title                    = {Tanzania national public private partnerships policy},
+  HowPublished             = {http://ppp.worldbank.org/public-private-partnership/library/tanzania-national-public-private-partnerships-policy},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.13},
+  Url                      = {http://ppp.worldbank.org/public-private-partnership/library/tanzania-national-public-private-partnerships-policy}
+}
+
+@Misc{wiback,
+  Title                    = {WiBACK},
+  HowPublished             = {wiback.org},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.13},
+  Url                      = {wiback.org}
+}
+
+@TechReport{pointtopic2013,
+  Title                    = {World Broadband Statistics Q1 2013},
+  Institution              = {Point Topic Ltd},
+  Year                     = {2013},
+
+  File                     = {:/home/guoger/Documents/refs/minor/Point-Topic-Global-Broadband-Statistics-Q1-2013.pdf:PDF},
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.13}
+}
+
