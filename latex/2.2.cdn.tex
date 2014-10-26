@@ -10,7 +10,6 @@ Two ovrall goals are:
 Since OUT online learning platform is already running in production phase, it is desired to impose minimum modifications to existing software stack.
 
 \section{Push the Content to the Edge}
-An intuitive solution to the problem of limited bandwidth is to cache popular web content locally, as illustrated in Figure X. This is the essential concept of Content Distribution Network (or Content Delivery Network, CDN), which originally aims at reducing user-perceived latency and offloading central servers\cite{dilley2002globally}. 
 
 \subsection{A closer look at Moodle}
 As introduced in section \ref{out_intro}, Moodle is deployed as underlying course management system for OUT E-learning platform. Moodle is an open sourse project written in PHP and well-documented\cite{aosamoodle}\cite{moodledoc}. Similiar to other web applications, it can be deployed in a typical LAMP or LNMP stack. In this chapter, we mainly focus on possible solutions for two problems stated previously, and leave the choice of actual server to chapter \ref{benchmark}
@@ -21,6 +20,11 @@ Moodle is a typical database-driven web application where all the pages are gene
 \item A database to store all related information including site configuration, student information, course details, events, etc.
 \item A directory to store materials and resources, as well as cache and temparory files. Typically it is named as \texttt{moodledata/}
 \end{itemize}
+
+As an online learning platform, interactive sessions are 
+
+An intuitive solution to the problem of limited bandwidth is to cache popular web content locally, as illustrated in Figure X. This is the essential concept of Content Distribution Network (or Content Delivery Network, CDN), which originally aims at reducing user-perceived latency and offloading central servers\cite{dilley2002globally}. On the other hand, by prolonging expiration time and 
+
 
 \subsection{Network File System}
 
