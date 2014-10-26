@@ -1,0 +1,142 @@
+\documentclass[a4paper,11pt]{report}
+\author{Jiannan Guo}
+%\usepackage[margin=1in]{geometry} %Prithvi
+
+\usepackage[T1]{fontenc}
+
+\usepackage{courier}
+% defines\textmu etc
+\usepackage{textcomp} 
+
+\usepackage{lmodern}
+
+\usepackage[latin1]{inputenc}
+
+\usepackage[english]{babel}
+%\usepackage{nada-ex}
+
+% graphics and images
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% listings
+\usepackage{listings}
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+
+% makes color citations
+\usepackage[hyperfootnotes=false]{hyperref}
+\hypersetup{
+  colorlinks=True,
+  citecolor=blue,
+  linkcolor=black,
+  urlcolor=blue}
+
+% Appendix package
+\usepackage[toc,page]{appendix}
+
+% Tables multirow entries
+\usepackage{multirow}
+
+% Acronyms package - Prithvi
+\usepackage[nonumberlist,acronym,toc,shortcuts,nomain]{glossaries}
+\robustify{\gls}% Make \gls not fragile
+%\loadglsentries[main]{acronyms}
+\makeglossaries
+% cmd to the folder and "makeglossaries acronyms"
+
+% Header customization
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\fancyhead[l]{\slshape\nouppercase{\leftmark}}
+\fancyhead[r]{\thepage}
+
+%To point to the top of image/table on clicking a reference - Prithvi
+\usepackage[all]{hypcap}
+	
+%For title page date - Prithvi
+\usepackage[long,nodayofweek]{datetime}
+\newdate{date}{15}{09}{2014}
+
+% Biblatex - Prithvi
+%Citation engine
+%\usepackage[backend=biber,citestyle=ieee,urldate=long,doi=false,isbn=false]{biblatex}
+
+%Source for citation
+%\addbibresource{test-master.bib,rfc.bib}
+
+%Use 'Retrieved on' for webpages cited
+%\DefineBibliographyStrings{english}{%
+%urlseen = {Retrieved on},
+%}
+
+%Include url and url date only for misc entries
+%\AtEveryBibitem{\ifentrytype{misc}{}{
+%    \clearfield{url}
+%    \clearfield{urldate}
+%  }
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TODO fix template - in progress (Prithvi template)
+\begin{document}
+
+% Title page
+\begin{titlepage}
+\thispagestyle{empty}
+
+\begin{center}
+%  \includegraphics[height=6cm]{kth_cmyk_info_comm_tech}\\
+  \vspace{0.5cm}
+  \Large{\sc KTH Royal Institute of Technology}\\
+  \vspace{3cm}
+
+  \vspace{0.5cm}
+  \Large{Highly Available and Robust Network Services in Under-served Areas}\\
+  %\vspace{0.5cm}
+  \vspace{2cm}  
+  \large{\sc Jiannan Guo}\\
+  \vspace{3cm}
+  Master's thesis\\
+  \vspace{0.5cm}
+  \begin{tabular}{ll} 
+    %TODO tranform o to swedish o
+    Supervisor: & Prof. Bj\"{o}rn Pehrson, KTH\\		
+	Examiner:  & Prof. Markus Hidell, KTH\\ 
+  \end{tabular}
+  \vspace{1cm}
+  \\Stockholm, \displaydate{date}\\
+\end{center} 
+
+\end{titlepage}
+
+% Prefix (abstract, contents etc.)
+\pagenumbering{roman}
+\pagestyle{plain}
+%\include{0.prefix}
+
+% Main text
+\cleardoublepage
+\pagenumbering{arabic}
+\pagestyle{fancy}
+
+\part{Robust Network Infrastructure in Rural Areas of Tanzania}
+
+\part{Highly Available Web Services}
+
+\include{2.1.introduction}
+\include{2.2.cdn}
+\include{2.3.low_power}
+\include{2.4.future}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{master}
+\bibliographystyle{IEEEtran}
+%\printbibliography[title={Bibliography}]
+
+%\include{appendix}
+
+\end{document}

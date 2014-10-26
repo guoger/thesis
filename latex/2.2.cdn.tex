@@ -1,0 +1,37 @@
+\chapter{Adapt to Frequent Network Failure and Limited Bandwidth}
+In this chapter, problems are further decomposed and analyzed. A variety of solutions are proposed and investigated. To prevent reinventing the wheel, enormous efforts have been put into studying existing technologies and tools in order to effectively solve the problem.
+
+Two ovrall goals are:
+\begin{itemize}
+\item To reduce user-perceived latency within the context of rural LAN with a narrow upper link.
+\item To achieve high availability by continuing service when network failure occurs.
+\end{itemize}
+
+Since OUT online learning platform is already running in production phase, it is desired to impose minimum modifications to existing software stack.
+
+\section{Push the Content to the Edge}
+An intuitive solution to the problem of limited bandwidth is to cache popular web content locally, as illustrated in Figure X. This is the essential concept of Content Distribution Network (or Content Delivery Network, CDN), which originally aims at reducing user-perceived latency and offloading central servers\cite{dilley2002globally}. 
+
+\subsection{A closer look at Moodle}
+As introduced in section \ref{out_intro}, Moodle is deployed as underlying course management system for OUT E-learning platform. Moodle is an open sourse project written in PHP and well-documented\cite{aosamoodle}\cite{moodledoc}. Similiar to other web applications, it can be deployed in a typical LAMP or LNMP stack. In this chapter, we mainly focus on possible solutions for two problems stated previously, and leave the choice of actual server to chapter \ref{benchmark}
+
+Moodle is a typical database-driven web application where all the pages are generated on-the-fly based on user request. The whole application is composed of three main components: 
+\begin{itemize}
+\item PHP source code, typically in \texttt{/var/www/moodle/}
+\item A database to store all related information including site configuration, student information, course details, events, etc.
+\item A directory to store materials and resources, as well as cache and temparory files. Typically it is named as \texttt{moodledata/}
+\end{itemize}
+
+\subsection{Network File System}
+
+\subsection{Database Cluster}
+
+\subsection{Content Delivery Network and Web Caching}
+
+\subsection{Database Replication and Synchronization}
+
+\section{Multi-Master Database Synchronization}
+
+\subsection{Concurrency Control Protocol}
+
+\subsection{Operational Transformation}
