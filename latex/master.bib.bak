@@ -417,6 +417,15 @@
   File                     = {:/home/guoger/Documents/master_thesis/references/06217412.pdf:PDF}
 }
 
+@InCollection{pathan2008content,
+  Title                    = {Content delivery networks: State of the art, insights, and imperatives},
+  Author                   = {Pathan, Mukaddim and Buyya, Rajkumar and Vakali, Athena},
+  Booktitle                = {Content Delivery Networks},
+  Publisher                = {Springer},
+  Year                     = {2008},
+  Pages                    = {3--32}
+}
+
 @InProceedings{plattner2004ganymed,
   Title                    = {Ganymed: Scalable replication for transactional web applications},
   Author                   = {Plattner, Christian and Alonso, Gustavo},
@@ -621,6 +630,14 @@
   Owner                    = {guoger},
   Timestamp                = {2014.10.13},
   Url                      = {http://www.raspberrypi.org/}
+}
+
+@Misc{squid,
+  HowPublished             = {http://www.squid-cache.org/},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.29},
+  Url                      = {http://www.squid-cache.org/}
 }
 
 @Misc{tzpppagriculture,
