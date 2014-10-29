@@ -110,7 +110,7 @@ A server-side web cache proxy typically sits in front of web server, attempting 
 \label{with_cache}
 \end{figure}
 
-Web cache is greatly advantageous in our scenario that it does not require modification on web application, except that some TCP optimizations could be done between web cache proxy and web server frontend. Web cache proxy can continue serving requests if offline mode enabled, which also meets our requirements.
+Web cache is greatly advantageous in our scenario that it does not require modification on web application, except that some TCP optimizations could be done between web cache proxy and web server frontend. Web cache proxy can continue serving requests if offline mode enabled, which also meets our requirements. The traffic between cache proxy and authentic server is standard HTTP request and response. The overhead and frequency of communication mainly depends on cache hit / cache miss ratio, expiration time and cache directory size.
 
 Although, all write traffic traverses cache proxy and goes to original server, which leads to a read-only system immediately when network disconnects. This is magnified when Moodle is taken into consideration, where user logins require interaction with original PHP code and database.
 %TODO screen shot
@@ -118,7 +118,9 @@ Although, all write traffic traverses cache proxy and goes to original server, w
 %One important feature of all web cache proxies is replacement strategy which invalidate caches and maintain freshness. A comprehensive survey of existing replacement strategy is presented in \cite{podlipnig2003survey}. However
 
 \subsection{Web Caching with Edge Server}
-To address the issue of dynamic content generation and client-server interaction, an intuitive and brute-force solution is to replicate application coe, or even the whole website at edge servers\ref{pathan2008content}, see Figure X. In this setup, an edge server is able to act as a complete standalone installation and serve user requests by itself. 
+To address the issue of dynamic content generation and client-server interaction, an intuitive and brute-force solution is to replicate application code or even the whole website at edge servers\ref{pathan2008content}, see Figure X. In this setup, an edge server is able to act as a complete standalone installation and serve user requests by itself. 
+%TODO replication figure
+
 
 
 \subsection{Database Replication and Synchronization}
