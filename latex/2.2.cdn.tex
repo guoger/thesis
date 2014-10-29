@@ -1,26 +1,21 @@
 \chapter{Adapt to Frequent Network Failure and Limited Bandwidth}
 %In this chapter, problems are further decomposed and analyzed. A variety of solutions are proposed and investigated. To prevent reinventing the wheel, enormous efforts have been put into studying existing technologies and tools in order to effectively solve the problem. 
-To clarify the problem and to efficiently search for solutions, we modelize the problem as following:
-
 
 %Most of techniques today focus on reducing response time and improving concurrency, rather than offline operation and network partitioning. Even though major companies optimize their server architecture for miliseconds of faster, web service in rural areas is still a question of existance.
 
 %TODO Read-only and Read-write
 
-Overall goals are:
-\begin{itemize}
-\item To reduce user-perceived latency and bandwidth usage within the context of rural LAN with a narrow upper link.
-\item To serve up-to-date content.
-\item To achieve partition tolerance by continuing service when network failure occurs.
-\end{itemize}
+%Overall goals are:
+%\begin{itemize}
+%\item To reduce user-perceived latency and bandwidth usage within the context of rural LAN with a narrow upper link.
+%\item To serve up-to-date content.
+%\item To achieve partition tolerance by continuing service when network failure occurs.
+%\end{itemize}
 
-It has been proven that consistency, high availability and partition tolerence are impossible to be achieved at same time\cite{brewer2000towards}\cite{gilbert2002brewer}, however weak consistency is acceptable in our case. 
-
-Since OUT online learning platform is already running in production phase, it is desired to impose minimum modifications to existing software stack.
-
-\section{A closer look at Moodle} \label{components}
+\section{A closer look at the problem} \label{components}
 As introduced in section \ref{out_intro}, Moodle is deployed as underlying course management system for OUT E-learning platform. Moodle is an open sourse project written in PHP and well-documented\cite{aosamoodle}\cite{moodledoc}. Similiar to other web applications, it can be deployed in a typical LAMP or LNMP stack. In this chapter, we mainly focus on possible solutions for two problems stated previously, and leave the choice of actual server to chapter \ref{benchmark}
 
+%Moodle components
 Moodle is a typical database-driven web application where all the pages are generated on-the-fly based on user request. The whole application is composed of three main components: 
 \begin{itemize}
 \item PHP source code, typically in \texttt{/var/www/moodle/}
@@ -28,24 +23,72 @@ Moodle is a typical database-driven web application where all the pages are gene
 \item A directory to store materials and resources, as well as cache and temparory files. Typically it is named as \texttt{moodledata/}
 \end{itemize}
 
-As an online learning platform, interactive sessions cannot be neglected such as forum, quiz and user-generated blogs. Hence, modifications need to be preserved.
-%TODO language
+%model of problem
+The problem addressed previously can be simplified and modelised as following,
+see Figure \ref{problem_model}. Each node in the model denotes a local
+server/proxy and has a certain amount of users associated with it.
 
-The problem is modelized as a multi-nodes system. Multiple local servers communicate with each other either in a centralized manner shown in Figure \ref{model_centralized} or distributed manner, see Figure \ref{model_distributed}.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.6\textwidth]{../images/model_centralized.jpeg}
-\caption{Centralized Model}
-\label{model_centralized}
 \includegraphics[width=0.6\textwidth]{../images/model_distributed.jpeg}
-\caption{Distributed Model}
-\label{model_distributed}
+\caption{Web Delivery Model}
+\label{problem_model}
 \end{figure}
 
+%What to store
+As simple as the model might be, components in it could be vastly heterogenous
+while mapping to different techniques. Content stored in a node can either be web objects,
+SQL replies, codes or even entire databases. Communication in between can also be
+based on a variety of protocols.
 
+%Interactive session
+As an online learning platform, users do not only passivly accept information,
+but also interact with Moodle through forum, personal blogs and quiz. All the
+changes made by users must be stored and seen everywhere. Thus, the system
+should not be read-only under any circumstance.
 
-\section{Web Caching and Prefetching}
-An intuitive and common solution for the problem of limited bandwidth is to cache popular web content locally, as illustrated in Figure \ref{with_cache}. Web caching has been proven as an effective approach to reduce bandwidth usage, user-perceived latency and loads on original server\cite{davison2001web}.
+%production and minimum affection
+Moodle has been in service and adding new services should affect existing
+structure as less as possible. Also, steps of adapting changes should be
+properly designed to avoid crushing the service.
+
+%communication overhead
+To maintain consistency and serve up-to-date content, a reasonable amount of
+communication overhead is necessary and is normally positive proportional to the
+extent of consistency. Although, due to the presumption of poor network
+connection and narrow bandwidth, different nodes in the system are preferably
+decoupled and autonomous.
+
+%Offline operation
+The autonomy is also closely correlated to the ability of performing offline
+operation. Many distributed systems have the ability to detect and recover from
+network partitioning, although it normally leads to a compromise of consistensy
+and content freshness. It has been proven that consistency, high availability and partition tolerence
+are impossible to be achieved at same time\cite{brewer2000towards}\cite{gilbert2002brewer}, necessary assumptions must
+be made according to the condition and needs.
+
+%Assumptions
+While the majority of web caching and content distribution techniques aim at
+better performance and delivery efficiency, we prioritize the ability of
+performing basic functionalities during network failure. We tolerate a
+relatively loose consistency while ensuring eventual convergence.
+
+%Affordability
+Lastly, to realize affordability, we mainly focus on open source techniques and
+free ware. Thankfully, many successful projects and tools have been made open
+source and publicly available. In the following sections of this chapter, we
+evaluate a variety of techniques against the criteria stated above and propose
+our solution based upon the conclusion.
+
+%TODO logic flow chart
+
+\section{Benchmark}
+\subsection{Web Caching}
+An intuitive and common solution for the problem of limited bandwidth is to
+cache popular web content locally, as illustrated in Figure \ref{with_cache}.
+Web caching has been proven to be an effective approach to reduce bandwidth
+usage, user-perceived latency and loads on original server\cite{davison2001web}.
 
 \begin{figure}[h]
 \centering
@@ -54,6 +97,7 @@ An intuitive and common solution for the problem of limited bandwidth is to cach
 \caption{Serve users without and with a Gateway Cache}
 \label{with_cache}
 \end{figure}
+
 
 A proxy cache is normally a shared cache deployed in user network by administrator. It fetches Internet objects on the behalf of user and stores them locally. When next request for the same object arrives at proxy server, it responds with local copy and in turn reduces latency and saves bandwidth.
 
