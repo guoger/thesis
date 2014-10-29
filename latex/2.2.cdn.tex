@@ -1,6 +1,7 @@
 \chapter{Adapt to Frequent Network Failure and Limited Bandwidth}
 %In this chapter, problems are further decomposed and analyzed. A variety of solutions are proposed and investigated. To prevent reinventing the wheel, enormous efforts have been put into studying existing technologies and tools in order to effectively solve the problem. 
-It is important to formalize the problem and clarify what we attempt to achieve.
+To clarify the problem and to efficiently search for solutions, we modelize the problem as following:
+
 
 %Most of techniques today focus on reducing response time and improving concurrency, rather than offline operation and network partitioning. Even though major companies optimize their server architecture for miliseconds of faster, web service in rural areas is still a question of existance.
 
@@ -29,6 +30,19 @@ Moodle is a typical database-driven web application where all the pages are gene
 
 As an online learning platform, interactive sessions cannot be neglected such as forum, quiz and user-generated blogs. Hence, modifications need to be preserved.
 %TODO language
+
+The problem is modelized as a multi-nodes system. Multiple local servers communicate with each other either in a centralized manner shown in Figure \ref{model_centralized} or distributed manner, see Figure \ref{model_distributed}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{../images/model_centralized.jpeg}
+\caption{Centralized Model}
+\label{model_centralized}
+\includegraphics[width=0.6\textwidth]{../images/model_distributed.jpeg}
+\caption{Distributed Model}
+\label{model_distributed}
+\end{figure}
+
+
 
 \section{Web Caching and Prefetching}
 An intuitive and common solution for the problem of limited bandwidth is to cache popular web content locally, as illustrated in Figure \ref{with_cache}. Web caching has been proven as an effective approach to reduce bandwidth usage, user-perceived latency and loads on original server\cite{davison2001web}.
