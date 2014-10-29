@@ -79,7 +79,8 @@ Lastly, to realize affordability, we mainly focus on open source techniques and
 free ware. Thankfully, many successful projects and tools have been made open
 source and publicly available. In the following sections of this chapter, we
 evaluate a variety of techniques against the criteria stated above and propose
-our solution based upon the conclusion.
+our solution based upon the conclusion. Several of potential solution are also
+tried out.
 
 %TODO logic flow chart
 
@@ -87,8 +88,10 @@ our solution based upon the conclusion.
 \subsection{Web Caching}
 An intuitive and common solution for the problem of limited bandwidth is to
 cache popular web content locally, as illustrated in Figure \ref{with_cache}.
-Web caching has been proven to be an effective approach to reduce bandwidth
-usage, user-perceived latency and loads on original server\cite{davison2001web}.
+A server-side web cache proxy typically sits in front of web server, attempting to serve user request with cached objects rather than triggering computation on
+web application. Web caching has been proven to be an effective approach to
+reduce bandwidth usage, user-perceived latency and loads on original server\cite{davison2001web}.
+
 
 \begin{figure}[h]
 \centering
