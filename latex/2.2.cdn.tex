@@ -147,8 +147,8 @@ Several studies also proposed the approaches to solve database synchronization a
 \subsection{Multi-Master Sycnhronization System}
 Similiar to MySQL Cluster Multi-Master setup, there exist several third-party tools for the same purpose.
 \begin{itemize}
-\item \textbf{Galera}\cite{galera} is alegedly most advanced database cluster which supports multi-master synchronization. 
-\item Tungsten
+\item \textbf{Galera}\cite{galera} is an open source synchronous database replication software developed to scale web application and provision high availability. It achieves consistency by optimistic locks and group communication. Galera is quorum-based and handles network partitioning by sacrificing the minority. Hence, Galera lacks the essencial features that we are seeking for and is out of consideration.
+\item \textbf{Tungsten}\cite{tungsten} replicates database in an asynchronous fashion and allows loose consistency. I
 \item SymmetricDS
 \end{itemize}
 
