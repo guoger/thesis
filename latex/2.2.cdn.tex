@@ -72,7 +72,7 @@ It has been proven that consistency, high availability and partition tolerence
 are impossible to be achieved at same time\cite{brewer2000towards}\cite{gilbert2002brewer}, necessary assumptions must
 be made according to the condition and needs.
 
-%Assumptions
+%TODO Assumptions
 While the majority of web caching and content distribution techniques aim at
 better performance and delivery efficiency, we prioritize the ability of
 performing basic functionalities during network failure. We tolerate a
@@ -118,19 +118,39 @@ Although, all write traffic traverses cache proxy and goes to original server, w
 %One important feature of all web cache proxies is replacement strategy which invalidate caches and maintain freshness. A comprehensive survey of existing replacement strategy is presented in \cite{podlipnig2003survey}. However
 
 \subsection{Web Caching with Edge Server}
-To address the issue of dynamic content generation and client-server interaction, an intuitive and brute-force solution is to replicate application code or even the whole website at edge servers\ref{pathan2008content}, see Figure X. In this setup, an edge server is able to act as a complete standalone installation and serve user requests by itself. 
+To address the issue of dynamic content generation and client-server interaction, an intuitive and brute-force solution is to generate user-specific page at the edge. A comprehensive study of edge servers can be found in \ref{pathan2008content}. Four strategies are presented: (a) edge computing (b) content-aware caching (c) content-blind caching (d) data replication, see Figure X
 %TODO replication figure
+In each of the strategy, the edge server attempts to reply user request on the behalf of original server with the information that is locally available. Edge computing still heavily relies on central database, hence out of our consideration. While CAC and CBC store partial database at the edge, data replication stores a complete copy of the database. When the size and complexity of database permit, data replication is desired since it outperforms other strategies in both response speed and offline operation. Although, it adds another layer of complexity to perform transaction processing and maintain the consistency through mutliple distributed databases. An exhaustive survey is presented in section \ref{database_sync}.
 
+Application code rarely changes in our case and is always on-way synchronized from original server, thus consistency can be relatively easy to achieve by periodically utilizing tools like rsync\ref{tridgell1999efficient}.
 
+%TODO file system
 
-\subsection{Database Replication and Synchronization}
+\section{Multi-Master Database Synchronization} \label{database_sync}
+Database replication techniques has been intensively deployed over clusters and workstations for redundency and load balancing (Figure X).  A LAN is always assumed by most of database replication techniques, whereas database replicas across the WAN are desired to realize our goals. We prioritize availability by compromising on consistency, as long as the system can reach eventual consistency\ref{vogels2009eventually}. Offline operations on distributed databases implies simutaneous modification on the same entry, which result in conflict after reconnection. Techniques to detect and reconsile conflicts are studied and evaluated.
+%TODO transaction process
 
 \subsection{Database Cluster}
+Firstly, several databases with native support for replication are studied.
 
-\section{Multi-Master Database Synchronization}
+%TODO MySQL cluster figure
+%CouchDB
+\textbf{CouchDB}\ref{couchdb} is an open source distributed database system developed in Apache. The most attractive feature of CouchDB is that it natively supports bi-directional synchronization among multiple database replicas and offline operations. When one replica is disconnected from the network, it retains autonomy and continues as a fully functional database from user point of view. Although, it fails to be our candidate since it is NoSQL database, whereas Moodle heavily relies on SQL calls and it will a significant task to modify Moodle to use NoSQL database.
 
-\subsection{Network File System}
-A more brute-force approach is to replicate all three main components in section \ref{components} at local server and have all user requests redirected to it. As a standalone web service, a Moodle installation can be entirely replicated as long as those three components are copied and properly configured.
-\subsection{Concurrency Control Protocol}
+%MySQL cluster
+\textbf{MySQL Cluster}\ref{mysqlcluster} is an open source distributed database system based on MySQL. It supports database sharding and duplicating. A typical use case of MySQL Cluster is shown in Figure X. Although, redundent copy of database can only be accessed with the presence of management master, and cannot be updated during network failures. Furthermore, database nodes are closely coupled with the assumption of LAN (low latency and high bandwidth).
+
+\subsection{Middleware-based Repliation System}
+Several studies also proposed the approaches to solve database synchronization at middleware-level\ref{cecchetc}\ref{amza2003conflict}\ref{plattner2004ganymed}. C-JDBC\ref{cecchetc} is an Java implementation of RAIDb\ref{cecchet2005raidb}, aiming at a framework to manage heterogenous databases. With built-in functionality of scheduling transaction processes, C-JDBC is perceived by users as a single virtual database. Although, the system is still centrally managed and could not handle partitioned network. Ganymed middleware system\ref{plattner2004ganymed}, inspired by C-JDBC, achieves consistency by serializing update/write requests at master and propogating changes to replicas in a lazy fashion. Users see a consistent data state (snapshot isolation), even though stale might it be. The limitation of these two middleware is also clear, that no write can be served during network failures.
+
+
+\subsection{Multi-Master Sycnhronization System}
+Similiar to MySQL Cluster Multi-Master setup, there exist several third-party tools for the same purpose.
+\begin{itemize}
+\item \textbf{Galera}\cite{galera} is alegedly most advanced database cluster which supports multi-master synchronization. 
+\item Tungsten
+\item SymmetricDS
+\end{itemize}
+
 
 \subsection{Operational Transformation}
