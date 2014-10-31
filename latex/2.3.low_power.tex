@@ -1,9 +1,13 @@
 \chapter{Low Power, yet Powerful}\label{benchmark}
-\section{Power Reduction on Servers}
+The ARM-based processors have received great attention for its characteristic of low power consumption and energy efficiency, especially in smart phone and portable device industry, where power consumption is one the most critical specifications. Furthermore, there is trend in server industry to shift to ARM-based architecture in order to cut off the bill of electricity. ARM is also ambitious in this area and about to publicize processors capable of virtualization. When it comes to rural development, power shortage has been forcing researchers and engineers to seek for alternative power sources. Lower power consumption of the equipments implies a bigger potential of surviving severe environment.
+Currently, we are exploring the possibilities of two platforms, namely Raspberry Pi and Odroid. The specifications of these two platform can be found in Table X
+%TODO specification table
+In the following sections, we benchmark a variety of attributes of Odroid and Raspberry Pi. The objective is to find out the capacity of these two platforms and an optimum form to run the web service. We explore the performance of all-in-one standalone installation and a small-scale low power cluster.
 
-\section{Benchmark of Server Ability}
-\subsection{Nginx or Apache}
-\subsection{Processor}
-\subsection{Find the bottleneck}
-
+\section{Benchmark of Server Capacity}
+\section{Nginx or Apache}
+Most of the websites today are powered by Apache due to its long history and abundant extensions. Although Apache relies on a processed-based manner to handle new connection, which has greatly limits the scalability and concurrency. Nginx is an event-based reverse proxy that handles request asynchronizily. It addresses C10K problem from the beginning and focus on scalability.
+To determine which server runs better on a resource constraint platform, we benchmark Nginx and Apache on both platform to evaluate the throughput, level of concurrency and response delay. We use siege and httperf to generate workload. We compare the performance of web server when serving different type of object: small text file, large JPG file.
+\section{Processor}
+\section{Find the bottleneck}
 \section{Small-scale Cluster}

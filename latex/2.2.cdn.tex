@@ -145,12 +145,14 @@ Several studies also proposed the approaches to solve database synchronization a
 
 
 \subsection{Multi-Master Sycnhronization System}
-Similiar to MySQL Cluster Multi-Master setup, there exist several third-party tools for the same purpose.
+Similiar to MySQL Cluster Multi-Master setup, we found three state-of-the-art open source tools to the similiar end.
 \begin{itemize}
 \item \textbf{Galera}\cite{galera} is an open source synchronous database replication software developed to scale web application and provision high availability. It achieves consistency by optimistic locks and group communication. Galera is quorum-based and handles network partitioning by sacrificing the minority. Hence, Galera lacks the essencial features that we are seeking for and is out of consideration.
-\item \textbf{Tungsten}\cite{tungsten} replicates database in an asynchronous fashion and allows loose consistency. I
-\item SymmetricDS
+\item \textbf{Tungsten}\cite{tungsten} replicates database asynchronously and allows loose consistency. Transactions are commited locally, and then propogated across all other nodes. Tungsten features offline operation and automatical recovery although it leave the responsibility of conflict avoidance completely to the application. Conflicts may disturbe replication and hard to trace.
+\item \textbf{SymmetricDS}\cite{symmetricds} is another open source asynchronous database replication management tool. It has several built-in rules to detect and reconsile conflicts. It can be configured flexibly to meet different needs, for example, have different courses store in different sites. Also, one appealing feature is that SymmetricDS support file synchronization as well. Figure X birefly illustrates how SymmetricDS works.
+%TODO symmetricds figure
 \end{itemize}
-
+We can draw the conclusion from above comparison that SymmetricDS is closest to our critaria and can be properly extended to meet our requirements. In the following section, we explore SymmetricDS in details and propose an approach to extend it.
 
 \subsection{Operational Transformation}
+
