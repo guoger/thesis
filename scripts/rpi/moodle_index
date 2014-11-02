@@ -1,0 +1,1373 @@
+== 10
+** SIEGE 3.0.5
+** Preparing 10 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: -1960360192 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1943574784 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1901611264 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1935182080 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1968752896 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1918396672 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1951967488 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1926789376 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1910003968 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1893218560 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		           5 hits
+Availability:		       33.33 %
+Elapsed time:		       59.99 secs
+Data transferred:	        0.03 MB
+Response time:		       27.34 secs
+Transaction rate:	        0.08 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        2.28
+Successful transactions:           5
+Failed transactions:	          10
+Longest transaction:	       28.24
+Shortest transaction:	        0.00
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 20
+** SIEGE 3.0.5
+** Preparing 20 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: 1580971776 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1614542592 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1690076928 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1631328000 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1639720704 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1606149888 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1648113408 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1673291520 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1664898816 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1597757184 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1564186368 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1706862336 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1622935296 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1656506112 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1589364480 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1572579072 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1715255040 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1681684224 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1723647744 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1698469632 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		           5 hits
+Availability:		       20.00 %
+Elapsed time:		       59.67 secs
+Data transferred:	        0.03 MB
+Response time:		       26.57 secs
+Transaction rate:	        0.08 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        2.23
+Successful transactions:           5
+Failed transactions:	          20
+Longest transaction:	       28.58
+Shortest transaction:	        0.00
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 40
+** SIEGE 3.0.5
+** Preparing 40 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: -1217108224 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1066039552 select timed out: Connection timed out
+[[1;32malert[0m] socket: -982112512 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1074432256 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1141573888 select timed out: Connection timed out
+[[1;32malert[0m] socket: -973719808 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1057646848 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1250679040 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1007290624 select timed out: Connection timed out
+[[1;32malert[0m] socket: -940148992 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1024076032 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1049254144 select timed out: Connection timed out
+[[1;32malert[0m] socket: -990505216 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1099610368 select timed out: Connection timed out
+[[1;32malert[0m] socket: -948541696 select timed out: Connection timed out
+[[1;32malert[0m] socket: -923363584 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1225500928 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1149966592 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1233893632 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1108003072 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1040861440 select timed out: Connection timed out
+[[1;32malert[0m] socket: -965327104 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1158359296 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1082824960 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1133181184 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1116395776 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1032468736 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1124788480 select timed out: Connection timed out
+[[1;32malert[0m] socket: -956934400 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1166752000 select timed out: Connection timed out
+[[1;32malert[0m] socket: -998897920 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1091217664 select timed out: Connection timed out
+[[1;32malert[0m] socket: -931756288 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1183537408 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1191930112 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1242286336 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1200322816 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1208715520 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1175144704 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1015683328 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		           4 hits
+Availability:		        9.09 %
+Elapsed time:		       59.79 secs
+Data transferred:	        0.02 MB
+Response time:		       27.61 secs
+Transaction rate:	        0.07 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        1.85
+Successful transactions:           4
+Failed transactions:	          40
+Longest transaction:	       28.96
+Shortest transaction:	        0.00
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 60
+** SIEGE 3.0.5
+** Preparing 60 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: -1503017216 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1192487168 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1544980736 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1637300480 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1268021504 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1309985024 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1276414208 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1284806912 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1259628800 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1553373440 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1477839104 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1570158848 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1519802624 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1586944256 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1469446400 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1217665280 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1226057984 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1351948544 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1511409920 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1670871296 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1654085888 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1326770432 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1385519360 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1536588032 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1419090176 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1444268288 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1620515072 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1301592320 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1402304768 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1293199616 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1318377728 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1200879872 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1242843392 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1612122368 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1461053696 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1427482880 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1662478592 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1393912064 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1595336960 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1603729664 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1335163136 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1628907776 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1578551552 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1494624512 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1368733952 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1561766144 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1377126656 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1452660992 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1435875584 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1410697472 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1528195328 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1234450688 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1679264000 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1486231808 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1184094464 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1251236096 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1209272576 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1343555840 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1645693184 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1360341248 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		           5 hits
+Availability:		        7.69 %
+Elapsed time:		       59.74 secs
+Data transferred:	        0.03 MB
+Response time:		       26.78 secs
+Transaction rate:	        0.08 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        2.24
+Successful transactions:           5
+Failed transactions:	          60
+Longest transaction:	       28.83
+Shortest transaction:	        0.00
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 80
+** SIEGE 3.0.5
+** Preparing 80 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: 761775872 select timed out: Connection timed out
+[[1;32malert[0m] socket: 409282304 select timed out: Connection timed out
+[[1;32malert[0m] socket: 375711488 select timed out: Connection timed out
+[[1;32malert[0m] socket: 619099904 select timed out: Connection timed out
+[[1;32malert[0m] socket: 560350976 select timed out: Connection timed out
+[[1;32malert[0m] socket: 501602048 select timed out: Connection timed out
+[[1;32malert[0m] socket: 476423936 select timed out: Connection timed out
+[[1;32malert[0m] socket: 358926080 select timed out: Connection timed out
+[[1;32malert[0m] socket: 963200768 select timed out: Connection timed out
+[[1;32malert[0m] socket: 593921792 select timed out: Connection timed out
+[[1;32malert[0m] socket: 400889600 select timed out: Connection timed out
+[[1;32malert[0m] socket: 526780160 select timed out: Connection timed out
+[[1;32malert[0m] socket: 350533376 select timed out: Connection timed out
+[[1;32malert[0m] socket: 862488320 select timed out: Connection timed out
+[[1;32malert[0m] socket: 451245824 select timed out: Connection timed out
+[[1;32malert[0m] socket: 904451840 select timed out: Connection timed out
+[[1;32malert[0m] socket: 845702912 select timed out: Connection timed out
+[[1;32malert[0m] socket: 325355264 select timed out: Connection timed out
+[[1;32malert[0m] socket: 568743680 select timed out: Connection timed out
+[[1;32malert[0m] socket: 879273728 select timed out: Connection timed out
+[[1;32malert[0m] socket: 493209344 select timed out: Connection timed out
+[[1;32malert[0m] socket: 887666432 select timed out: Connection timed out
+[[1;32malert[0m] socket: 938022656 select timed out: Connection timed out
+[[1;32malert[0m] socket: 669456128 select timed out: Connection timed out
+[[1;32malert[0m] socket: 694634240 select timed out: Connection timed out
+[[1;32malert[0m] socket: 828917504 select timed out: Connection timed out
+[[1;32malert[0m] socket: 703026944 select timed out: Connection timed out
+[[1;32malert[0m] socket: 677848832 select timed out: Connection timed out
+[[1;32malert[0m] socket: 635885312 select timed out: Connection timed out
+[[1;32malert[0m] socket: 971593472 select timed out: Connection timed out
+[[1;32malert[0m] socket: 602314496 select timed out: Connection timed out
+[[1;32malert[0m] socket: 719812352 select timed out: Connection timed out
+[[1;32malert[0m] socket: 770168576 select timed out: Connection timed out
+[[1;32malert[0m] socket: 812132096 select timed out: Connection timed out
+[[1;32malert[0m] socket: 518387456 select timed out: Connection timed out
+[[1;32malert[0m] socket: 316962560 select timed out: Connection timed out
+[[1;32malert[0m] socket: 308569856 select timed out: Connection timed out
+[[1;32malert[0m] socket: 543565568 select timed out: Connection timed out
+[[1;32malert[0m] socket: 392496896 select timed out: Connection timed out
+[[1;32malert[0m] socket: 535172864 select timed out: Connection timed out
+[[1;32malert[0m] socket: 661063424 select timed out: Connection timed out
+[[1;32malert[0m] socket: 736597760 select timed out: Connection timed out
+[[1;32malert[0m] socket: 753383168 select timed out: Connection timed out
+[[1;32malert[0m] socket: 803739392 select timed out: Connection timed out
+[[1;32malert[0m] socket: 652670720 select timed out: Connection timed out
+[[1;32malert[0m] socket: 711419648 select timed out: Connection timed out
+[[1;32malert[0m] socket: 442853120 select timed out: Connection timed out
+[[1;32malert[0m] socket: 585529088 select timed out: Connection timed out
+[[1;32malert[0m] socket: 577136384 select timed out: Connection timed out
+[[1;32malert[0m] socket: 929629952 select timed out: Connection timed out
+[[1;32malert[0m] socket: 434460416 select timed out: Connection timed out
+[[1;32malert[0m] socket: 820524800 select timed out: Connection timed out
+[[1;32malert[0m] socket: 367318784 select timed out: Connection timed out
+[[1;32malert[0m] socket: 870881024 select timed out: Connection timed out
+[[1;32malert[0m] socket: 921237248 select timed out: Connection timed out
+[[1;32malert[0m] socket: 627492608 select timed out: Connection timed out
+[[1;32malert[0m] socket: 484816640 select timed out: Connection timed out
+[[1;32malert[0m] socket: 686241536 select timed out: Connection timed out
+[[1;32malert[0m] socket: 896059136 select timed out: Connection timed out
+[[1;32malert[0m] socket: 551958272 select timed out: Connection timed out
+[[1;32malert[0m] socket: 459638528 select timed out: Connection timed out
+[[1;32malert[0m] socket: 342140672 select timed out: Connection timed out
+[[1;32malert[0m] socket: 644278016 select timed out: Connection timed out
+[[1;32malert[0m] socket: 946415360 select timed out: Connection timed out
+[[1;32malert[0m] socket: 954808064 select timed out: Connection timed out
+[[1;32malert[0m] socket: 426067712 select timed out: Connection timed out
+[[1;32malert[0m] socket: 468031232 select timed out: Connection timed out
+[[1;32malert[0m] socket: 333747968 select timed out: Connection timed out
+[[1;32malert[0m] socket: 912844544 select timed out: Connection timed out
+[[1;32malert[0m] socket: 417675008 select timed out: Connection timed out
+[[1;32malert[0m] socket: 744990464 select timed out: Connection timed out
+[[1;32malert[0m] socket: 795346688 select timed out: Connection timed out
+[[1;32malert[0m] socket: 509994752 select timed out: Connection timed out
+[[1;32malert[0m] socket: 778561280 select timed out: Connection timed out
+[[1;32malert[0m] socket: 384104192 select timed out: Connection timed out
+[[1;32malert[0m] socket: 837310208 select timed out: Connection timed out
+[[1;32malert[0m] socket: 854095616 select timed out: Connection timed out
+[[1;32malert[0m] socket: 728205056 select timed out: Connection timed out
+[[1;32malert[0m] socket: 610707200 select timed out: Connection timed out
+[[1;32malert[0m] socket: 786953984 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		           5 hits
+Availability:		        5.88 %
+Elapsed time:		       59.74 secs
+Data transferred:	        0.03 MB
+Response time:		       27.05 secs
+Transaction rate:	        0.08 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        2.26
+Successful transactions:           5
+Failed transactions:	          80
+Longest transaction:	       28.62
+Shortest transaction:	        0.00
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 100
+** SIEGE 3.0.5
+** Preparing 100 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: -528414976 select timed out: Connection timed out
+[[1;32malert[0m] socket: -436095232 select timed out: Connection timed out
+[[1;32malert[0m] socket: -209492224 select timed out: Connection timed out
+[[1;32malert[0m] socket: -645912832 select timed out: Connection timed out
+[[1;32malert[0m] socket: -427702528 select timed out: Connection timed out
+[[1;32malert[0m] socket: -452880640 select timed out: Connection timed out
+[[1;32malert[0m] socket: -687876352 select timed out: Connection timed out
+[[1;32malert[0m] socket: -301811968 select timed out: Connection timed out
+[[1;32malert[0m] socket: -696269056 select timed out: Connection timed out
+[[1;32malert[0m] socket: -394131712 select timed out: Connection timed out
+[[1;32malert[0m] socket: -33245440 select timed out: Connection timed out
+[[1;32malert[0m] socket: -75208960 select timed out: Connection timed out
+[[1;32malert[0m] socket: -318597376 select timed out: Connection timed out
+[[1;32malert[0m] socket: -360560896 select timed out: Connection timed out
+[[1;32malert[0m] socket: -520022272 select timed out: Connection timed out
+[[1;32malert[0m] socket: -8067328 select timed out: Connection timed out
+[[1;32malert[0m] socket: 33896192 select timed out: Connection timed out
+[[1;32malert[0m] socket: -66816256 select timed out: Connection timed out
+[[1;32malert[0m] socket: 8718080 select timed out: Connection timed out
+[[1;32malert[0m] socket: -578771200 select timed out: Connection timed out
+[[1;32malert[0m] socket: -637520128 select timed out: Connection timed out
+[[1;32malert[0m] socket: -612342016 select timed out: Connection timed out
+[[1;32malert[0m] socket: -326990080 select timed out: Connection timed out
+[[1;32malert[0m] socket: -293419264 select timed out: Connection timed out
+[[1;32malert[0m] socket: -142350592 select timed out: Connection timed out
+[[1;32malert[0m] socket: -671090944 select timed out: Connection timed out
+[[1;32malert[0m] socket: -234670336 select timed out: Connection timed out
+[[1;32malert[0m] socket: -587163904 select timed out: Connection timed out
+[[1;32malert[0m] socket: -150743296 select timed out: Connection timed out
+[[1;32malert[0m] socket: -368953600 select timed out: Connection timed out
+[[1;32malert[0m] socket: -335382784 select timed out: Connection timed out
+[[1;32malert[0m] socket: -461273344 select timed out: Connection timed out
+[[1;32malert[0m] socket: -217884928 select timed out: Connection timed out
+[[1;32malert[0m] socket: -469666048 select timed out: Connection timed out
+[[1;32malert[0m] socket: -310204672 select timed out: Connection timed out
+[[1;32malert[0m] socket: -486451456 select timed out: Connection timed out
+[[1;32malert[0m] socket: 67467008 select timed out: Connection timed out
+[[1;32malert[0m] socket: -536807680 select timed out: Connection timed out
+[[1;32malert[0m] socket: -83601664 select timed out: Connection timed out
+[[1;32malert[0m] socket: -603949312 select timed out: Connection timed out
+[[1;32malert[0m] socket: -243063040 select timed out: Connection timed out
+[[1;32malert[0m] socket: -561985792 select timed out: Connection timed out
+[[1;32malert[0m] socket: -352168192 select timed out: Connection timed out
+[[1;32malert[0m] socket: -654305536 select timed out: Connection timed out
+[[1;32malert[0m] socket: -285026560 select timed out: Connection timed out
+[[1;32malert[0m] socket: -41638144 select timed out: Connection timed out
+[[1;32malert[0m] socket: -704661760 select timed out: Connection timed out
+[[1;32malert[0m] socket: 50681600 select timed out: Connection timed out
+[[1;32malert[0m] socket: -58423552 select timed out: Connection timed out
+[[1;32malert[0m] socket: -343775488 select timed out: Connection timed out
+[[1;32malert[0m] socket: -662698240 select timed out: Connection timed out
+[[1;32malert[0m] socket: 101037824 select timed out: Connection timed out
+[[1;32malert[0m] socket: 17110784 select timed out: Connection timed out
+[[1;32malert[0m] socket: -595556608 select timed out: Connection timed out
+[[1;32malert[0m] socket: -721447168 select timed out: Connection timed out
+[[1;32malert[0m] socket: -16460032 select timed out: Connection timed out
+[[1;32malert[0m] socket: -50030848 select timed out: Connection timed out
+[[1;32malert[0m] socket: 325376 select timed out: Connection timed out
+[[1;32malert[0m] socket: -444487936 select timed out: Connection timed out
+[[1;32malert[0m] socket: -167528704 select timed out: Connection timed out
+[[1;32malert[0m] socket: -24852736 select timed out: Connection timed out
+[[1;32malert[0m] socket: -91994368 select timed out: Connection timed out
+[[1;32malert[0m] socket: -478058752 select timed out: Connection timed out
+[[1;32malert[0m] socket: -410917120 select timed out: Connection timed out
+[[1;32malert[0m] socket: -679483648 select timed out: Connection timed out
+[[1;32malert[0m] socket: -385739008 select timed out: Connection timed out
+[[1;32malert[0m] socket: 109430528 select timed out: Connection timed out
+[[1;32malert[0m] socket: -226277632 select timed out: Connection timed out
+[[1;32malert[0m] socket: -419309824 select timed out: Connection timed out
+[[1;32malert[0m] socket: -620734720 select timed out: Connection timed out
+[[1;32malert[0m] socket: -133957888 select timed out: Connection timed out
+[[1;32malert[0m] socket: -125565184 select timed out: Connection timed out
+[[1;32malert[0m] socket: -251455744 select timed out: Connection timed out
+[[1;32malert[0m] socket: 42288896 select timed out: Connection timed out
+[[1;32malert[0m] socket: -629127424 select timed out: Connection timed out
+[[1;32malert[0m] socket: -268241152 select timed out: Connection timed out
+[[1;32malert[0m] socket: -117172480 select timed out: Connection timed out
+[[1;32malert[0m] socket: -713054464 select timed out: Connection timed out
+[[1;32malert[0m] socket: -402524416 select timed out: Connection timed out
+[[1;32malert[0m] socket: -108779776 select timed out: Connection timed out
+[[1;32malert[0m] socket: -377346304 select timed out: Connection timed out
+[[1;32malert[0m] socket: -159136000 select timed out: Connection timed out
+[[1;32malert[0m] socket: -184314112 select timed out: Connection timed out
+[[1;32malert[0m] socket: -545200384 select timed out: Connection timed out
+[[1;32malert[0m] socket: -259848448 select timed out: Connection timed out
+[[1;32malert[0m] socket: -175921408 select timed out: Connection timed out
+[[1;32malert[0m] socket: 84252416 select timed out: Connection timed out
+[[1;32malert[0m] socket: -201099520 select timed out: Connection timed out
+[[1;32malert[0m] socket: -570378496 select timed out: Connection timed out
+[[1;32malert[0m] socket: -511629568 select timed out: Connection timed out
+[[1;32malert[0m] socket: -503236864 select timed out: Connection timed out
+[[1;32malert[0m] socket: -494844160 select timed out: Connection timed out
+[[1;32malert[0m] socket: -100387072 select timed out: Connection timed out
+[[1;32malert[0m] socket: -276633856 select timed out: Connection timed out
+[[1;32malert[0m] socket: 25503488 select timed out: Connection timed out
+[[1;32malert[0m] socket: -553593088 select timed out: Connection timed out
+[[1;32malert[0m] socket: 75859712 select timed out: Connection timed out
+[[1;32malert[0m] socket: 59074304 select timed out: Connection timed out
+[[1;32malert[0m] socket: 92645120 select timed out: Connection timed out
+[[1;32malert[0m] socket: -192706816 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		           5 hits
+Availability:		        4.76 %
+Elapsed time:		       59.82 secs
+Data transferred:	        0.03 MB
+Response time:		       27.07 secs
+Transaction rate:	        0.08 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        2.26
+Successful transactions:           5
+Failed transactions:	         100
+Longest transaction:	       29.09
+Shortest transaction:	        0.00
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 120
+** SIEGE 3.0.5
+** Preparing 120 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: 329774848 select timed out: Connection timed out
+[[1;32malert[0m] socket: 522807040 select timed out: Connection timed out
+[[1;32malert[0m] socket: 497628928 select timed out: Connection timed out
+[[1;32malert[0m] socket: 464058112 select timed out: Connection timed out
+[[1;32malert[0m] socket: 388523776 select timed out: Connection timed out
+[[1;32malert[0m] socket: -442353920 select timed out: Connection timed out
+[[1;32malert[0m] socket: 145135360 select timed out: Connection timed out
+[[1;32malert[0m] socket: 10852096 select timed out: Connection timed out
+[[1;32malert[0m] socket: -383604992 select timed out: Connection timed out
+[[1;32malert[0m] socket: 304596736 select timed out: Connection timed out
+[[1;32malert[0m] socket: 187098880 select timed out: Connection timed out
+[[1;32malert[0m] socket: -115038464 select timed out: Connection timed out
+[[1;32malert[0m] socket: -358426880 select timed out: Connection timed out
+[[1;32malert[0m] socket: -366819584 select timed out: Connection timed out
+[[1;32malert[0m] socket: -224143616 select timed out: Connection timed out
+[[1;32malert[0m] socket: -131823872 select timed out: Connection timed out
+[[1;32malert[0m] socket: 61208320 select timed out: Connection timed out
+[[1;32malert[0m] socket: 195491584 select timed out: Connection timed out
+[[1;32malert[0m] socket: 136742656 select timed out: Connection timed out
+[[1;32malert[0m] socket: -425568512 select timed out: Connection timed out
+[[1;32malert[0m] socket: -375212288 select timed out: Connection timed out
+[[1;32malert[0m] socket: 36030208 select timed out: Connection timed out
+[[1;32malert[0m] socket: -140216576 select timed out: Connection timed out
+[[1;32malert[0m] socket: 103171840 select timed out: Connection timed out
+[[1;32malert[0m] socket: 354952960 select timed out: Connection timed out
+[[1;32malert[0m] socket: -64682240 select timed out: Connection timed out
+[[1;32malert[0m] socket: -157001984 select timed out: Connection timed out
+[[1;32malert[0m] socket: 447272704 select timed out: Connection timed out
+[[1;32malert[0m] socket: -257714432 select timed out: Connection timed out
+[[1;32malert[0m] socket: -81467648 select timed out: Connection timed out
+[[1;32malert[0m] socket: -299677952 select timed out: Connection timed out
+[[1;32malert[0m] socket: 338167552 select timed out: Connection timed out
+[[1;32malert[0m] socket: -350034176 select timed out: Connection timed out
+[[1;32malert[0m] socket: -400390400 select timed out: Connection timed out
+[[1;32malert[0m] socket: 161920768 select timed out: Connection timed out
+[[1;32malert[0m] socket: -274499840 select timed out: Connection timed out
+[[1;32malert[0m] socket: 19244800 select timed out: Connection timed out
+[[1;32malert[0m] socket: -173787392 select timed out: Connection timed out
+[[1;32malert[0m] socket: -14326016 select timed out: Connection timed out
+[[1;32malert[0m] socket: 413701888 select timed out: Connection timed out
+[[1;32malert[0m] socket: 422094592 select timed out: Connection timed out
+[[1;32malert[0m] socket: 170313472 select timed out: Connection timed out
+[[1;32malert[0m] socket: 363345664 select timed out: Connection timed out
+[[1;32malert[0m] socket: 438880000 select timed out: Connection timed out
+[[1;32malert[0m] socket: 86386432 select timed out: Connection timed out
+[[1;32malert[0m] socket: 514414336 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2459392 select timed out: Connection timed out
+[[1;32malert[0m] socket: -316463360 select timed out: Connection timed out
+[[1;32malert[0m] socket: 472450816 select timed out: Connection timed out
+[[1;32malert[0m] socket: -215750912 select timed out: Connection timed out
+[[1;32malert[0m] socket: 489236224 select timed out: Connection timed out
+[[1;32malert[0m] socket: -408783104 select timed out: Connection timed out
+[[1;32malert[0m] socket: 506021632 select timed out: Connection timed out
+[[1;32malert[0m] socket: -232536320 select timed out: Connection timed out
+[[1;32malert[0m] socket: -308070656 select timed out: Connection timed out
+[[1;32malert[0m] socket: -282892544 select timed out: Connection timed out
+[[1;32malert[0m] socket: 69601024 select timed out: Connection timed out
+[[1;32malert[0m] socket: -56289536 select timed out: Connection timed out
+[[1;32malert[0m] socket: 531199744 select timed out: Connection timed out
+[[1;32malert[0m] socket: -240929024 select timed out: Connection timed out
+[[1;32malert[0m] socket: 77993728 select timed out: Connection timed out
+[[1;32malert[0m] socket: -31111424 select timed out: Connection timed out
+[[1;32malert[0m] socket: -39504128 select timed out: Connection timed out
+[[1;32malert[0m] socket: -391997696 select timed out: Connection timed out
+[[1;32malert[0m] socket: 287811328 select timed out: Connection timed out
+[[1;32malert[0m] socket: -467532032 select timed out: Connection timed out
+[[1;32malert[0m] socket: 94779136 select timed out: Connection timed out
+[[1;32malert[0m] socket: -98253056 select timed out: Connection timed out
+[[1;32malert[0m] socket: -459139328 select timed out: Connection timed out
+[[1;32malert[0m] socket: -106645760 select timed out: Connection timed out
+[[1;32malert[0m] socket: -417175808 select timed out: Connection timed out
+[[1;32malert[0m] socket: -73074944 select timed out: Connection timed out
+[[1;32malert[0m] socket: 111564544 select timed out: Connection timed out
+[[1;32malert[0m] socket: -190572800 select timed out: Connection timed out
+[[1;32malert[0m] socket: 128349952 select timed out: Connection timed out
+[[1;32malert[0m] socket: -22718720 select timed out: Connection timed out
+[[1;32malert[0m] socket: -433961216 select timed out: Connection timed out
+[[1;32malert[0m] socket: -47896832 select timed out: Connection timed out
+[[1;32malert[0m] socket: 430487296 select timed out: Connection timed out
+[[1;32malert[0m] socket: -249321728 select timed out: Connection timed out
+[[1;32malert[0m] socket: 396916480 select timed out: Connection timed out
+[[1;32malert[0m] socket: 237455104 select timed out: Connection timed out
+[[1;32malert[0m] socket: 27637504 select timed out: Connection timed out
+[[1;32malert[0m] socket: 229062400 select timed out: Connection timed out
+[[1;32malert[0m] socket: -165394688 select timed out: Connection timed out
+[[1;32malert[0m] socket: 212276992 select timed out: Connection timed out
+[[1;32malert[0m] socket: 52815616 select timed out: Connection timed out
+[[1;32malert[0m] socket: -324856064 select timed out: Connection timed out
+[[1;32malert[0m] socket: -266107136 select timed out: Connection timed out
+[[1;32malert[0m] socket: -291285248 select timed out: Connection timed out
+[[1;32malert[0m] socket: -341641472 select timed out: Connection timed out
+[[1;32malert[0m] socket: 119957248 select timed out: Connection timed out
+[[1;32malert[0m] socket: 254240512 select timed out: Connection timed out
+[[1;32malert[0m] socket: 245847808 select timed out: Connection timed out
+[[1;32malert[0m] socket: -333248768 select timed out: Connection timed out
+[[1;32malert[0m] socket: -182180096 select timed out: Connection timed out
+[[1;32malert[0m] socket: -450746624 select timed out: Connection timed out
+[[1;32malert[0m] socket: -207358208 select timed out: Connection timed out
+[[1;32malert[0m] socket: 321382144 select timed out: Connection timed out
+[[1;32malert[0m] socket: 271025920 select timed out: Connection timed out
+[[1;32malert[0m] socket: 405309184 select timed out: Connection timed out
+[[1;32malert[0m] socket: 455665408 select timed out: Connection timed out
+[[1;32malert[0m] socket: 178706176 select timed out: Connection timed out
+[[1;32malert[0m] socket: 153528064 select timed out: Connection timed out
+[[1;32malert[0m] socket: -89860352 select timed out: Connection timed out
+[[1;32malert[0m] socket: 203884288 select timed out: Connection timed out
+[[1;32malert[0m] socket: 44422912 select timed out: Connection timed out
+[[1;32malert[0m] socket: -198965504 select timed out: Connection timed out
+[[1;32malert[0m] socket: -148609280 select timed out: Connection timed out
+[[1;32malert[0m] socket: 279418624 select timed out: Connection timed out
+[[1;32malert[0m] socket: 262633216 select timed out: Connection timed out
+[[1;32malert[0m] socket: 296204032 select timed out: Connection timed out
+[[1;32malert[0m] socket: 480843520 select timed out: Connection timed out
+[[1;32malert[0m] socket: 220669696 select timed out: Connection timed out
+[[1;32malert[0m] socket: -123431168 select timed out: Connection timed out
+[[1;32malert[0m] socket: 346560256 select timed out: Connection timed out
+[[1;32malert[0m] socket: -5933312 select timed out: Connection timed out
+[[1;32malert[0m] socket: 380131072 select timed out: Connection timed out
+[[1;32malert[0m] socket: 371738368 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		           5 hits
+Availability:		        4.03 %
+Elapsed time:		       59.73 secs
+Data transferred:	        0.03 MB
+Response time:		       27.88 secs
+Transaction rate:	        0.08 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        2.33
+Successful transactions:           5
+Failed transactions:	         119
+Longest transaction:	       29.85
+Shortest transaction:	        0.00
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 140
+** SIEGE 3.0.5
+** Preparing 140 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: -1875470592 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1900648704 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1739687680 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1808328960 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1732794624 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1942612224 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1707616512 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1690831104 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1580226304 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1825114368 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2083788544 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1925826816 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1867077888 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1665652992 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2100573952 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1699223808 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2068502784 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2060110080 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1899149056 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2033432320 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1724401920 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1749580032 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1766365440 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2051717376 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1848792832 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1858685184 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1682438400 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1757972736 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1924327168 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1538262784 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1680938752 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1992968448 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1648867584 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1791543552 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1917434112 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2085288192 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1890756352 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2102073600 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2026539264 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1909041408 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2093680896 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1841899776 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1657260288 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1815222016 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1783150848 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1655760640 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1647367936 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2117359360 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1976183040 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1833507072 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1706116864 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1674045696 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2009753856 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1741187328 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1496299264 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1672546048 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1731294976 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2034931968 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2076895488 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1806829312 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1873970944 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2018146560 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1957897984 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1949505280 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2118859008 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1882363648 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2043324672 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2008254208 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1907541760 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1798436608 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2025039616 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2110466304 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1865578240 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1915934464 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2127251712 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1748080384 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1850292480 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1857185536 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1974683392 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1563440896 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1546655488 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2058610432 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1840400128 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2041825024 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1966290688 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1999861504 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2108966656 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2125752064 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2067003136 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2050217728 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1630582528 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2016646912 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1984575744 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1605404416 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1991468800 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1555048192 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1714509568 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1622189824 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1521477376 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1983076096 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1934219520 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1722902272 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1941112576 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1764865792 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1774758144 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1832007424 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2144037120 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1597011712 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2075395840 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2092181248 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1932719872 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1773258496 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1588619008 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2142537472 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1638975232 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2134144768 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1689331456 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1504691968 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1613797120 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1892256000 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1959397632 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2135644416 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1487906560 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1664153344 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1756473088 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2001361152 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1697724160 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1790043904 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1781651200 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1951004928 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1513084672 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1640474880 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1529870080 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1823614720 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1571833600 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1816721664 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1883863296 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1716009216 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1799936256 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1967790336 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		           5 hits
+Availability:		        3.45 %
+Elapsed time:		       59.71 secs
+Data transferred:	        0.03 MB
+Response time:		       27.17 secs
+Transaction rate:	        0.08 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        2.27
+Successful transactions:           5
+Failed transactions:	         140
+Longest transaction:	       28.82
+Shortest transaction:	        0.00
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 160
+** SIEGE 3.0.5
+** Preparing 160 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: -192329984 select timed out: Connection timed out
+[[1;32malert[0m] socket: 353195776 select timed out: Connection timed out
+[[1;32malert[0m] socket: 269268736 select timed out: Connection timed out
+[[1;32malert[0m] socket: 210519808 select timed out: Connection timed out
+[[1;32malert[0m] socket: 34273024 select timed out: Connection timed out
+[[1;32malert[0m] socket: 59451136 select timed out: Connection timed out
+[[1;32malert[0m] socket: -217508096 select timed out: Connection timed out
+[[1;32malert[0m] socket: 218912512 select timed out: Connection timed out
+[[1;32malert[0m] socket: 17487616 select timed out: Connection timed out
+[[1;32malert[0m] socket: 143378176 select timed out: Connection timed out
+[[1;32malert[0m] socket: 42665728 select timed out: Connection timed out
+[[1;32malert[0m] socket: 235697920 select timed out: Connection timed out
+[[1;32malert[0m] socket: 328017664 select timed out: Connection timed out
+[[1;32malert[0m] socket: -175544576 select timed out: Connection timed out
+[[1;32malert[0m] socket: 176948992 select timed out: Connection timed out
+[[1;32malert[0m] socket: 151770880 select timed out: Connection timed out
+[[1;32malert[0m] socket: 126592768 select timed out: Connection timed out
+[[1;32malert[0m] socket: -150366464 select timed out: Connection timed out
+[[1;32malert[0m] socket: -209115392 select timed out: Connection timed out
+[[1;32malert[0m] socket: 277661440 select timed out: Connection timed out
+[[1;32malert[0m] socket: -737855744 select timed out: Connection timed out
+[[1;32malert[0m] socket: -561608960 select timed out: Connection timed out
+[[1;32malert[0m] socket: -511252736 select timed out: Connection timed out
+[[1;32malert[0m] socket: -16083200 select timed out: Connection timed out
+[[1;32malert[0m] socket: -167151872 select timed out: Connection timed out
+[[1;32malert[0m] socket: -914102528 select timed out: Connection timed out
+[[1;32malert[0m] socket: 369981184 select timed out: Connection timed out
+[[1;32malert[0m] socket: -611965184 select timed out: Connection timed out
+[[1;32malert[0m] socket: -393754880 select timed out: Connection timed out
+[[1;32malert[0m] socket: 244090624 select timed out: Connection timed out
+[[1;32malert[0m] socket: 160163584 select timed out: Connection timed out
+[[1;32malert[0m] socket: 227305216 select timed out: Connection timed out
+[[1;32malert[0m] socket: -452503808 select timed out: Connection timed out
+[[1;32malert[0m] socket: -301435136 select timed out: Connection timed out
+[[1;32malert[0m] socket: -225900800 select timed out: Connection timed out
+[[1;32malert[0m] socket: -477681920 select timed out: Connection timed out
+[[1;32malert[0m] socket: 168556288 select timed out: Connection timed out
+[[1;32malert[0m] socket: -712677632 select timed out: Connection timed out
+[[1;32malert[0m] socket: -318220544 select timed out: Connection timed out
+[[1;32malert[0m] socket: 193734400 select timed out: Connection timed out
+[[1;32malert[0m] socket: 101414656 select timed out: Connection timed out
+[[1;32malert[0m] socket: 319624960 select timed out: Connection timed out
+[[1;32malert[0m] socket: -158759168 select timed out: Connection timed out
+[[1;32malert[0m] socket: -754641152 select timed out: Connection timed out
+[[1;32malert[0m] socket: 134985472 select timed out: Connection timed out
+[[1;32malert[0m] socket: -846960896 select timed out: Connection timed out
+[[1;32malert[0m] socket: 93021952 select timed out: Connection timed out
+[[1;32malert[0m] socket: -293042432 select timed out: Connection timed out
+[[1;32malert[0m] socket: 386766592 select timed out: Connection timed out
+[[1;32malert[0m] socket: -183937280 select timed out: Connection timed out
+[[1;32malert[0m] socket: -200722688 select timed out: Connection timed out
+[[1;32malert[0m] socket: -267864320 select timed out: Connection timed out
+[[1;32malert[0m] socket: 302839552 select timed out: Connection timed out
+[[1;32malert[0m] socket: -251078912 select timed out: Connection timed out
+[[1;32malert[0m] socket: 76236544 select timed out: Connection timed out
+[[1;32malert[0m] socket: -519645440 select timed out: Connection timed out
+[[1;32malert[0m] socket: -125188352 select timed out: Connection timed out
+[[1;32malert[0m] socket: -83224832 select timed out: Connection timed out
+[[1;32malert[0m] socket: -284649728 select timed out: Connection timed out
+[[1;32malert[0m] socket: -653928704 select timed out: Connection timed out
+[[1;32malert[0m] socket: -108402944 select timed out: Connection timed out
+[[1;32malert[0m] socket: 202127104 select timed out: Connection timed out
+[[1;32malert[0m] socket: -402147584 select timed out: Connection timed out
+[[1;32malert[0m] socket: 51058432 select timed out: Connection timed out
+[[1;32malert[0m] socket: -91617536 select timed out: Connection timed out
+[[1;32malert[0m] socket: -32868608 select timed out: Connection timed out
+[[1;32malert[0m] socket: -595179776 select timed out: Connection timed out
+[[1;32malert[0m] socket: -670714112 select timed out: Connection timed out
+[[1;32malert[0m] socket: -418932992 select timed out: Connection timed out
+[[1;32malert[0m] socket: -687499520 select timed out: Connection timed out
+[[1;32malert[0m] socket: 9094912 select timed out: Connection timed out
+[[1;32malert[0m] socket: -939280640 select timed out: Connection timed out
+[[1;32malert[0m] socket: 286054144 select timed out: Connection timed out
+[[1;32malert[0m] socket: 109807360 select timed out: Connection timed out
+[[1;32malert[0m] socket: 336410368 select timed out: Connection timed out
+[[1;32malert[0m] socket: -351791360 select timed out: Connection timed out
+[[1;32malert[0m] socket: 67843840 select timed out: Connection timed out
+[[1;32malert[0m] socket: 185341696 select timed out: Connection timed out
+[[1;32malert[0m] socket: 84629248 select timed out: Connection timed out
+[[1;32malert[0m] socket: -645536000 select timed out: Connection timed out
+[[1;32malert[0m] socket: -460896512 select timed out: Connection timed out
+[[1;32malert[0m] socket: -486074624 select timed out: Connection timed out
+[[1;32malert[0m] socket: -343398656 select timed out: Connection timed out
+[[1;32malert[0m] socket: 361588480 select timed out: Connection timed out
+[[1;32malert[0m] socket: 378373888 select timed out: Connection timed out
+[[1;32malert[0m] socket: 311232256 select timed out: Connection timed out
+[[1;32malert[0m] socket: 118200064 select timed out: Connection timed out
+[[1;32malert[0m] socket: -788211968 select timed out: Connection timed out
+[[1;32malert[0m] socket: -141973760 select timed out: Connection timed out
+[[1;32malert[0m] socket: -469289216 select timed out: Connection timed out
+[[1;32malert[0m] socket: -100010240 select timed out: Connection timed out
+[[1;32malert[0m] socket: -242686208 select timed out: Connection timed out
+[[1;32malert[0m] socket: -872139008 select timed out: Connection timed out
+[[1;32malert[0m] socket: -804997376 select timed out: Connection timed out
+[[1;32malert[0m] socket: 294446848 select timed out: Connection timed out
+[[1;32malert[0m] socket: -729463040 select timed out: Connection timed out
+[[1;32malert[0m] socket: -570001664 select timed out: Connection timed out
+[[1;32malert[0m] socket: -435718400 select timed out: Connection timed out
+[[1;32malert[0m] socket: -326613248 select timed out: Connection timed out
+[[1;32malert[0m] socket: -49654016 select timed out: Connection timed out
+[[1;32malert[0m] socket: -821782784 select timed out: Connection timed out
+[[1;32malert[0m] socket: -66439424 select timed out: Connection timed out
+[[1;32malert[0m] socket: -553216256 select timed out: Connection timed out
+[[1;32malert[0m] socket: -376969472 select timed out: Connection timed out
+[[1;32malert[0m] socket: 260876032 select timed out: Connection timed out
+[[1;32malert[0m] socket: -905709824 select timed out: Connection timed out
+[[1;32malert[0m] socket: -679106816 select timed out: Connection timed out
+[[1;32malert[0m] socket: -116795648 select timed out: Connection timed out
+[[1;32malert[0m] socket: -796604672 select timed out: Connection timed out
+[[1;32malert[0m] socket: -427325696 select timed out: Connection timed out
+[[1;32malert[0m] socket: -620357888 select timed out: Connection timed out
+[[1;32malert[0m] socket: -234293504 select timed out: Connection timed out
+[[1;32malert[0m] socket: -838568192 select timed out: Connection timed out
+[[1;32malert[0m] socket: -502860032 select timed out: Connection timed out
+[[1;32malert[0m] socket: -74832128 select timed out: Connection timed out
+[[1;32malert[0m] socket: -578394368 select timed out: Connection timed out
+[[1;32malert[0m] socket: -746248448 select timed out: Connection timed out
+[[1;32malert[0m] socket: -58046720 select timed out: Connection timed out
+[[1;32malert[0m] socket: -771426560 select timed out: Connection timed out
+[[1;32malert[0m] socket: -855353600 select timed out: Connection timed out
+[[1;32malert[0m] socket: -528038144 select timed out: Connection timed out
+[[1;32malert[0m] socket: -922495232 select timed out: Connection timed out
+[[1;32malert[0m] socket: -335005952 select timed out: Connection timed out
+[[1;32malert[0m] socket: -544823552 select timed out: Connection timed out
+[[1;32malert[0m] socket: -637143296 select timed out: Connection timed out
+[[1;32malert[0m] socket: -930887936 select timed out: Connection timed out
+[[1;32malert[0m] socket: -721070336 select timed out: Connection timed out
+[[1;32malert[0m] socket: -368576768 select timed out: Connection timed out
+[[1;32malert[0m] socket: -24475904 select timed out: Connection timed out
+[[1;32malert[0m] socket: -410540288 select timed out: Connection timed out
+[[1;32malert[0m] socket: -880531712 select timed out: Connection timed out
+[[1;32malert[0m] socket: -888924416 select timed out: Connection timed out
+[[1;32malert[0m] socket: -830175488 select timed out: Connection timed out
+[[1;32malert[0m] socket: -536430848 select timed out: Connection timed out
+[[1;32malert[0m] socket: -662321408 select timed out: Connection timed out
+[[1;32malert[0m] socket: -863746304 select timed out: Connection timed out
+[[1;32malert[0m] socket: -41261312 select timed out: Connection timed out
+[[1;32malert[0m] socket: -897317120 select timed out: Connection timed out
+[[1;32malert[0m] socket: -276257024 select timed out: Connection timed out
+[[1;32malert[0m] socket: -259471616 select timed out: Connection timed out
+[[1;32malert[0m] socket: -444111104 select timed out: Connection timed out
+[[1;32malert[0m] socket: -360184064 select timed out: Connection timed out
+[[1;32malert[0m] socket: -586787072 select timed out: Connection timed out
+[[1;32malert[0m] socket: -385362176 select timed out: Connection timed out
+[[1;32malert[0m] socket: -603572480 select timed out: Connection timed out
+[[1;32malert[0m] socket: -695892224 select timed out: Connection timed out
+[[1;32malert[0m] socket: -779819264 select timed out: Connection timed out
+[[1;32malert[0m] socket: -628750592 select timed out: Connection timed out
+[[1;32malert[0m] socket: -133581056 select timed out: Connection timed out
+[[1;32malert[0m] socket: -494467328 select timed out: Connection timed out
+[[1;32malert[0m] socket: 395159296 select timed out: Connection timed out
+[[1;32malert[0m] socket: -813390080 select timed out: Connection timed out
+[[1;32malert[0m] socket: -309827840 select timed out: Connection timed out
+[[1;32malert[0m] socket: -704284928 select timed out: Connection timed out
+[[1;32malert[0m] socket: -763033856 select timed out: Connection timed out
+[[1;32malert[0m] socket: 25880320 select timed out: Connection timed out
+[[1;32malert[0m] socket: 702208 select timed out: Connection timed out
+[[1;32malert[0m] socket: -7690496 select timed out: Connection timed out
+[[1;32malert[0m] socket: 252483328 select timed out: Connection timed out
+[[1;32malert[0m] socket: 344803072 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		           5 hits
+Availability:		        3.03 %
+Elapsed time:		       59.80 secs
+Data transferred:	        0.03 MB
+Response time:		       26.53 secs
+Transaction rate:	        0.08 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        2.22
+Successful transactions:           5
+Failed transactions:	         160
+Longest transaction:	       28.55
+Shortest transaction:	        0.00
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 180
+** SIEGE 3.0.5
+** Preparing 180 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: -1052825856 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1178716416 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1682278656 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1145145600 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1346570496 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1715849472 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1203894528 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1514424576 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1556388096 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1547995392 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1279428864 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1245858048 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1531209984 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1598351616 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1287821568 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1304606976 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1187109120 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1061218560 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1690671360 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1212287232 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1103182080 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1438890240 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1773418240 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1756632832 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1874130688 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1799776512 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2059950336 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1950845184 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1405319424 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1388534016 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1455675648 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1111574784 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1892096256 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2092340992 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1321392384 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1741027584 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1648707840 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2026379520 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1875310848 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2125911808 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2075555584 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1657100544 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1983235840 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1539602688 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1094789376 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1480853760 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1296214272 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1338177792 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1170323712 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1086396672 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1749420288 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2051557632 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1640315136 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1790203648 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1044433152 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1422104832 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1806989056 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1581566208 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2043164928 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1924486912 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1673885952 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1430497536 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1497639168 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1907701504 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1857345280 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2135484672 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2016806656 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1823774464 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2058770176 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1798596352 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1890916096 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2068343040 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1942452480 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2009594112 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1941272320 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1832167168 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1816561920 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2143877376 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1078003968 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1036040448 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2127091968 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1380141312 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1824954624 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1774598400 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1917274368 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2118699264 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2117519104 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1866918144 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1153538304 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1522817280 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1161931008 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1615137024 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1848952576 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1069611264 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1237465344 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1506031872 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1220679936 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1464068352 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1564780800 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2034772224 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1312999680 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1363355904 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1254250752 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1489246464 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1195501824 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1354963200 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1724242176 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1707456768 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1732634880 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1606744320 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1371748608 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1136752896 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1765025536 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1589958912 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1573173504 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1699064064 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1631922432 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1757812992 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1665493248 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1472461056 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1766205696 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1858525440 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1447282944 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1865737984 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1782991104 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1808169216 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1781810944 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2076735744 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1413712128 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1623529728 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1882523392 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1883703552 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1958057728 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2101913856 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2142697216 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1908881664 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1974843136 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1850132736 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1262643456 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1899308800 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1959237888 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1815381760 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1916094208 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1791383808 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1934059776 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1967630592 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1976023296 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1984416000 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1949665024 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2067162880 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2033592064 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2041984768 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1932879616 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2110306560 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2134304512 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2017986816 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2083948288 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1966450432 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2109126400 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1841740032 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2085128448 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2100733696 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1840559872 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2093521152 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2001201408 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1128360192 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1900488960 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1833347328 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2050377472 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1991628544 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1992808704 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1925667072 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2025199360 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1396926720 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2008413952 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1119967488 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2000021248 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1229072640 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1329785088 select timed out: Connection timed out
+[[1;32malert[0m] socket: -1271036160 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		           5 hits
+Availability:		        2.70 %
+Elapsed time:		       59.73 secs
+Data transferred:	        0.03 MB
+Response time:		       26.47 secs
+Transaction rate:	        0.08 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        2.22
+Successful transactions:           5
+Failed transactions:	         180
+Longest transaction:	       28.40
+Shortest transaction:	        0.00
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 200
+** SIEGE 3.0.5
+** Preparing 200 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: 439076608 select timed out: Connection timed out
+[[1;32malert[0m] socket: 959424256 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1278347008 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1244776192 select timed out: Connection timed out
+[[1;32malert[0m] socket: 363542272 select timed out: Connection timed out
+[[1;32malert[0m] socket: -39307520 select timed out: Connection timed out
+[[1;32malert[0m] socket: 422291200 select timed out: Connection timed out
+[[1;32malert[0m] socket: 489432832 select timed out: Connection timed out
+[[1;32malert[0m] socket: 103368448 select timed out: Connection timed out
+[[1;32malert[0m] socket: 447469312 select timed out: Connection timed out
+[[1;32malert[0m] socket: 992995072 select timed out: Connection timed out
+[[1;32malert[0m] socket: 967816960 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1009780480 select timed out: Connection timed out
+[[1;32malert[0m] socket: -106449152 select timed out: Connection timed out
+[[1;32malert[0m] socket: 825140992 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1437808384 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1194419968 select timed out: Connection timed out
+[[1;32malert[0m] socket: 514610944 select timed out: Connection timed out
+[[1;32malert[0m] socket: 86583040 select timed out: Connection timed out
+[[1;32malert[0m] socket: 791570176 select timed out: Connection timed out
+[[1;32malert[0m] socket: 497825536 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1110492928 select timed out: Connection timed out
+[[1;32malert[0m] socket: -47700224 select timed out: Connection timed out
+[[1;32malert[0m] socket: 405505792 select timed out: Connection timed out
+[[1;32malert[0m] socket: 397113088 select timed out: Connection timed out
+[[1;32malert[0m] socket: 749606656 select timed out: Connection timed out
+[[1;32malert[0m] socket: 757999360 select timed out: Connection timed out
+[[1;32malert[0m] socket: 539789056 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1261561600 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1018173184 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1513342720 select timed out: Connection timed out
+[[1;32malert[0m] socket: 27834112 select timed out: Connection timed out
+[[1;32malert[0m] socket: -114841856 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1311917824 select timed out: Connection timed out
+[[1;32malert[0m] socket: 472647424 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1320310528 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1387452160 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1093707520 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1269954304 select timed out: Connection timed out
+[[1;32malert[0m] socket: 774784768 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1169241856 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1303525120 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1043351296 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1337095936 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1538520832 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1504950016 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1345488640 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1286739712 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1395844864 select timed out: Connection timed out
+[[1;32malert[0m] socket: 388720384 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1353881344 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1379059456 select timed out: Connection timed out
+[[1;32malert[0m] socket: 548181760 select timed out: Connection timed out
+[[1;32malert[0m] socket: 934246144 select timed out: Connection timed out
+[[1;32malert[0m] socket: -89663744 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1295132416 select timed out: Connection timed out
+[[1;32malert[0m] socket: 329971456 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1076922112 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1085314816 select timed out: Connection timed out
+[[1;32malert[0m] socket: 556574464 select timed out: Connection timed out
+[[1;32malert[0m] socket: 909068032 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1253168896 select timed out: Connection timed out
+[[1;32malert[0m] socket: 573359872 select timed out: Connection timed out
+[[1;32malert[0m] socket: -30914816 select timed out: Connection timed out
+[[1;32malert[0m] socket: 36226816 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1202812672 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1446201088 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1034958592 select timed out: Connection timed out
+[[1;32malert[0m] socket: 674072320 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1118885632 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1471379200 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1051744000 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1219598080 select timed out: Connection timed out
+[[1;32malert[0m] socket: 867104512 select timed out: Connection timed out
+[[1;32malert[0m] socket: 875497216 select timed out: Connection timed out
+[[1;32malert[0m] socket: 850319104 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1404237568 select timed out: Connection timed out
+[[1;32malert[0m] socket: 883889920 select timed out: Connection timed out
+[[1;32malert[0m] socket: 254437120 select timed out: Connection timed out
+[[1;32malert[0m] socket: 288007936 select timed out: Connection timed out
+[[1;32malert[0m] socket: 262829824 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1026565888 select timed out: Connection timed out
+[[1;32malert[0m] socket: 942638848 select timed out: Connection timed out
+[[1;32malert[0m] socket: 413898496 select timed out: Connection timed out
+[[1;32malert[0m] socket: 271222528 select timed out: Connection timed out
+[[1;32malert[0m] socket: 724428544 select timed out: Connection timed out
+[[1;32malert[0m] socket: 44619520 select timed out: Connection timed out
+[[1;32malert[0m] socket: 632108800 select timed out: Connection timed out
+[[1;32malert[0m] socket: 187295488 select timed out: Connection timed out
+[[1;32malert[0m] socket: 371934976 select timed out: Connection timed out
+[[1;32malert[0m] socket: 69797632 select timed out: Connection timed out
+[[1;32malert[0m] socket: 523003648 select timed out: Connection timed out
+[[1;32malert[0m] socket: 564967168 select timed out: Connection timed out
+[[1;32malert[0m] socket: -5736704 select timed out: Connection timed out
+[[1;32malert[0m] socket: 531396352 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1177634560 select timed out: Connection timed out
+[[1;32malert[0m] socket: -22522112 select timed out: Connection timed out
+[[1;32malert[0m] socket: -64485632 select timed out: Connection timed out
+[[1;32malert[0m] socket: 976209664 select timed out: Connection timed out
+[[1;32malert[0m] socket: 506218240 select timed out: Connection timed out
+[[1;32malert[0m] socket: -81271040 select timed out: Connection timed out
+[[1;32malert[0m] socket: -56092928 select timed out: Connection timed out
+[[1;32malert[0m] socket: 455862016 select timed out: Connection timed out
+[[1;32malert[0m] socket: 481040128 select timed out: Connection timed out
+[[1;32malert[0m] socket: 464254720 select timed out: Connection timed out
+[[1;32malert[0m] socket: -72878336 select timed out: Connection timed out
+[[1;32malert[0m] socket: 430683904 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1227990784 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1362274048 select timed out: Connection timed out
+[[1;32malert[0m] socket: 808355584 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1546913536 select timed out: Connection timed out
+[[1;32malert[0m] socket: 229259008 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1160849152 select timed out: Connection timed out
+[[1;32malert[0m] socket: -98056448 select timed out: Connection timed out
+[[1;32malert[0m] socket: 237651712 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1328703232 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1135671040 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1421022976 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1370666752 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1102100224 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1211205376 select timed out: Connection timed out
+[[1;32malert[0m] socket: 690857728 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1429415680 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1454593792 select timed out: Connection timed out
+[[1;32malert[0m] socket: 657286912 select timed out: Connection timed out
+[[1;32malert[0m] socket: 53012224 select timed out: Connection timed out
+[[1;32malert[0m] socket: 707643136 select timed out: Connection timed out
+[[1;32malert[0m] socket: 120153856 select timed out: Connection timed out
+[[1;32malert[0m] socket: 615323392 select timed out: Connection timed out
+[[1;32malert[0m] socket: 204080896 select timed out: Connection timed out
+[[1;32malert[0m] socket: 212473600 select timed out: Connection timed out
+[[1;32malert[0m] socket: 590145280 select timed out: Connection timed out
+[[1;32malert[0m] socket: 699250432 select timed out: Connection timed out
+[[1;32malert[0m] socket: 136939264 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1152456448 select timed out: Connection timed out
+[[1;32malert[0m] socket: 925853440 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1060136704 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1144063744 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1127278336 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1068529408 select timed out: Connection timed out
+[[1;32malert[0m] socket: 19441408 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1001387776 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1488164608 select timed out: Connection timed out
+[[1;32malert[0m] socket: 984602368 select timed out: Connection timed out
+[[1;32malert[0m] socket: 11048704 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2656000 select timed out: Connection timed out
+[[1;32malert[0m] socket: 296400640 select timed out: Connection timed out
+[[1;32malert[0m] socket: 892282624 select timed out: Connection timed out
+[[1;32malert[0m] socket: 355149568 select timed out: Connection timed out
+[[1;32malert[0m] socket: 346756864 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1521735424 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1186027264 select timed out: Connection timed out
+[[1;32malert[0m] socket: 321578752 select timed out: Connection timed out
+[[1;32malert[0m] socket: 313186048 select timed out: Connection timed out
+[[1;32malert[0m] socket: 380327680 select timed out: Connection timed out
+[[1;32malert[0m] socket: 279615232 select timed out: Connection timed out
+[[1;32malert[0m] socket: 858711808 select timed out: Connection timed out
+[[1;32malert[0m] socket: 917460736 select timed out: Connection timed out
+[[1;32malert[0m] socket: 338364160 select timed out: Connection timed out
+[[1;32malert[0m] socket: 304793344 select timed out: Connection timed out
+[[1;32malert[0m] socket: 900675328 select timed out: Connection timed out
+[[1;32malert[0m] socket: 246044416 select timed out: Connection timed out
+[[1;32malert[0m] socket: 841926400 select timed out: Connection timed out
+[[1;32malert[0m] socket: 766392064 select timed out: Connection timed out
+[[1;32malert[0m] socket: 799962880 select timed out: Connection timed out
+[[1;32malert[0m] socket: 833533696 select timed out: Connection timed out
+[[1;32malert[0m] socket: 648894208 select timed out: Connection timed out
+[[1;32malert[0m] socket: 741213952 select timed out: Connection timed out
+[[1;32malert[0m] socket: 153724672 select timed out: Connection timed out
+[[1;32malert[0m] socket: 623716096 select timed out: Connection timed out
+[[1;32malert[0m] socket: 170510080 select timed out: Connection timed out
+[[1;32malert[0m] socket: 94975744 select timed out: Connection timed out
+[[1;32malert[0m] socket: 716035840 select timed out: Connection timed out
+[[1;32malert[0m] socket: 682465024 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1236383488 select timed out: Connection timed out
+[[1;32malert[0m] socket: 816748288 select timed out: Connection timed out
+[[1;32malert[0m] socket: 606930688 select timed out: Connection timed out
+[[1;32malert[0m] socket: 732821248 select timed out: Connection timed out
+[[1;32malert[0m] socket: -14129408 select timed out: Connection timed out
+[[1;32malert[0m] socket: 61404928 select timed out: Connection timed out
+[[1;32malert[0m] socket: 951031552 select timed out: Connection timed out
+[[1;32malert[0m] socket: 783177472 select timed out: Connection timed out
+[[1;32malert[0m] socket: 640501504 select timed out: Connection timed out
+[[1;32malert[0m] socket: 665679616 select timed out: Connection timed out
+[[1;32malert[0m] socket: 598537984 select timed out: Connection timed out
+[[1;32malert[0m] socket: 220866304 select timed out: Connection timed out
+[[1;32malert[0m] socket: 128546560 select timed out: Connection timed out
+[[1;32malert[0m] socket: 162117376 select timed out: Connection timed out
+[[1;32malert[0m] socket: 195688192 select timed out: Connection timed out
+[[1;32malert[0m] socket: 78190336 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1462986496 select timed out: Connection timed out
+[[1;32malert[0m] socket: 111761152 select timed out: Connection timed out
+[[1;32malert[0m] socket: 178902784 select timed out: Connection timed out
+[[1;32malert[0m] socket: 145331968 select timed out: Connection timed out
+[[1;32malert[0m] socket: 581752576 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1555306240 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1530128128 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1496557312 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1479771904 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1412630272 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		           5 hits
+Availability:		        2.44 %
+Elapsed time:		       59.69 secs
+Data transferred:	        0.03 MB
+Response time:		       26.97 secs
+Transaction rate:	        0.08 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        2.26
+Successful transactions:           5
+Failed transactions:	         200
+Longest transaction:	       28.68
+Shortest transaction:	        0.00
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
