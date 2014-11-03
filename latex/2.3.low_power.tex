@@ -89,14 +89,40 @@ Figure \ref{simple_php}(a) shows that Odroid can handle much more PHP request th
 \label{moodle_php_result}
 \end{figure}
 
-As shown in Figure\ref{moodle_php_result}(a), transaction rate and availability drops under 180 concurrent requests occur. The latency is beyond tolerable under 50 concurrent requests, according to a study of tolerable waiting time of website\ref{}. As the total transaction number in this test is significantly lower than the previous one in Figure \ref{simple_php}, we suspect that PHP processing power is the bottleneck in a moodle installation rather than database query and web frontend. Thus, we test the capacity of a standalone installation of Moodle, in which all components are in one box (Odroid), shown in Figure {}
+As shown in Figure\ref{moodle_php_result}(a), transaction rate and availability drops under 180 concurrent requests occur. The latency is beyond tolerable under 50 concurrent requests, according to a study of tolerable waiting time of website\ref{nah2004study}. As the total transaction number in this test is significantly lower than the previous one in Figure \ref{simple_php}, we suspect that PHP processing power is the bottleneck in a moodle installation rather than database query and web frontend. Thus, we test the capacity of a standalone installation of Moodle, in which all components are in one box (Odroid), shown in Figure \ref{standalone}.
 
-Impact of changing web frontend does not evidently influence transaction rate, which implies that PHP processing capacity is the limiting factor in one Moodle installation.
+\begin{figure}[h]
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{standalone.png}
+\caption{$\sum trans$ \& Availability}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{standalone_res.png}
+\caption{$T_{resp}$}
+\end{subfigure}
+\caption{Odroid as a standalone server and PHP server}
+\label{standalone}
+\end{figure}
+
+Impact of adding web frontend does not evidently influence transaction rate, which implies that PHP processing capacity is the limiting factor in one Moodle installation.
 
 \section{Database}
 We apply the same method to test database although fail to exhaust the resource on Odroid before running out CPU and memory on our testbed high-end machine, hence we conclud that database query does not limit a Moodle installation before expanding PHP capacity.
 
 \section{Scale Out to Eliminate Bottleneck}
-We propose following cluster structure that can be easily scaled out coinciding the increase of users, see Figure \ref{}
-%TODO cluster figure
+We propose following cluster with current hardware, combining both web service and SymmetricDS service discussed in chapter\ref{synch}, see Figure \ref{cluster}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{cluster.jpeg}
+\caption{Cluster Structure}
+\label{cluster}
+\end{figure}
+
+The cluster can be easily scaled out to cope with the increase of users by simply adding more PHP server instances. Nginx as a reverse proxy can be configured to handle load balancing. To further boost web performance, we configure Nginx to cache frequently requested page hence reducing the load on PHP and database server.
+
+
 

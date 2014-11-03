@@ -1,4 +1,4 @@
-\chapter{Adapt to Frequent Network Failure and Limited Bandwidth}
+\chapter{Adapt to Frequent Network Failure and Limited Bandwidth}\label{synch}
 %In this chapter, problems are further decomposed and analyzed. A variety of solutions are proposed and investigated. To prevent reinventing the wheel, enormous efforts have been put into studying existing technologies and tools in order to effectively solve the problem. 
 
 %Most of techniques today focus on reducing response time and improving concurrency, rather than offline operation and network partitioning. Even though major companies optimize their server architecture for miliseconds of faster, web service in rural areas is still a question of existance.
@@ -88,7 +88,7 @@ tried out.
 
 %TODO logic flow chart
 
-\section{Benchmark}
+\section{Survey on Techniques to enhance web performance}
 
 \subsection{Content Delivery Network}
 Content Delivery Network overlaps with Web Cache Proxy at the concept of pushing web content to users. A Content Delivery Network is a collaborative set of surrogate servers spanning the network, where web contents are mirrored\cite{pathan2008content}. Users will perceive a smaller latency while fetching content from a nearby CDN surrogate server rather than original web server. The essence of CDN is illustrated in figure X
@@ -135,13 +135,13 @@ Firstly, several databases with native support for replication are studied.
 
 %TODO MySQL cluster figure
 %CouchDB
-\textbf{CouchDB}\ref{couchdb} is an open source distributed database system developed in Apache. The most attractive feature of CouchDB is that it natively supports bi-directional synchronization among multiple database replicas and offline operations. When one replica is disconnected from the network, it retains autonomy and continues as a fully functional database from user point of view. Although, it fails to be our candidate since it is NoSQL database, whereas Moodle heavily relies on SQL calls and it will a significant task to modify Moodle to use NoSQL database.
+\textbf{CouchDB} \ref{couchdb} is an open source distributed database system developed in Apache. The most attractive feature of CouchDB is that it natively supports bi-directional synchronization among multiple database replicas and offline operations. When one replica is disconnected from the network, it retains autonomy and continues as a fully functional database from user point of view. Although, it fails to be our candidate since it is NoSQL database, whereas Moodle heavily relies on SQL calls and it will a significant task to modify Moodle to use NoSQL database.
 
 %MySQL cluster
-\textbf{MySQL Cluster}\ref{mysqlcluster} is an open source distributed database system based on MySQL. It supports database sharding and duplicating. A typical use case of MySQL Cluster is shown in Figure X. Although, redundent copy of database can only be accessed with the presence of management master, and cannot be updated during network failures. Furthermore, database nodes are closely coupled with the assumption of LAN (low latency and high bandwidth).
+\textbf{MySQL Cluster} \ref{mysqlcluster} is an open source distributed database system based on MySQL. It supports database sharding and duplicating. A typical use case of MySQL Cluster is shown in Figure X. Although, redundent copy of database can only be accessed with the presence of management master, and cannot be updated during network failures. Furthermore, database nodes are closely coupled with the assumption of LAN (low latency and high bandwidth).
 
 \subsection{Middleware-based Repliation System}
-Several studies also proposed the approaches to solve database synchronization at middleware-level\ref{cecchetc}\ref{amza2003conflict}\ref{plattner2004ganymed}. C-JDBC\ref{cecchetc} is an Java implementation of RAIDb\ref{cecchet2005raidb}, aiming at a framework to manage heterogenous databases. With built-in functionality of scheduling transaction processes, C-JDBC is perceived by users as a single virtual database. Although, the system is still centrally managed and could not handle partitioned network. Ganymed middleware system\ref{plattner2004ganymed}, inspired by C-JDBC, achieves consistency by serializing update/write requests at master and propogating changes to replicas in a lazy fashion. Users see a consistent data state (snapshot isolation), even though stale might it be. The limitation of these two middleware is also clear, that no write can be served during network failures.
+Several studies also proposed the approaches to solve database synchronization at middleware-level\ref{cecchetc} \ref{amza2003conflict} \ref{plattner2004ganymed}. C-JDBC \ref{cecchetc} is an Java implementation of RAIDb\ref{cecchet2005raidb}, aiming at a framework to manage heterogenous databases. With built-in functionality of scheduling transaction processes, C-JDBC is perceived by users as a single virtual database. Although, the system is still centrally managed and could not handle partitioned network. Ganymed middleware system\ref{plattner2004ganymed}, inspired by C-JDBC, achieves consistency by serializing update/write requests at master and propogating changes to replicas in a lazy fashion. Users see a consistent data state (snapshot isolation), even though stale might it be. The limitation of these two middleware is also clear, that no write can be served during network failures.
 
 
 \subsection{Multi-Master Sycnhronization System}

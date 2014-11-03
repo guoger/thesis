@@ -305,6 +305,18 @@
   Publisher                = {ACM}
 }
 
+@Article{nah2004study,
+  Title                    = {A study on tolerable waiting time: how long are web users willing to wait?},
+  Author                   = {Nah, Fiona Fui-Hoon},
+  Journal                  = {Behaviour \& Information Technology},
+  Year                     = {2004},
+  Number                   = {3},
+  Pages                    = {153--163},
+  Volume                   = {23},
+
+  Publisher                = {Taylor \& Francis}
+}
+
 @Article{nungucase,
   Title                    = {The Case of Learning by Doing and its Applications in Tanzania},
   Author                   = {NUNGU, Amos},
@@ -620,6 +632,14 @@
   Owner                    = {guoger},
   Timestamp                = {2014.10.13},
   Url                      = {http://esrf.or.tz/docs/ESRFDiscussionPaper36.pdf}
+}
+
+@Misc{galera,
+  HowPublished             = {http://galeracluster.com/},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.10.30},
+  Url                      = {http://galeracluster.com/}
 }
 
 @Misc{macha,

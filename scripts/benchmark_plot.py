@@ -131,6 +131,35 @@ def simple_php_max_res():
     ax.set_ylim([0, 35])
     fig.savefig('output/simple_php_max_res.png')
 
+def moodle_index_standalone_and_phpalone():
+    c1, t1 = sp.extract_value('Transactions', 'odroid/standalone')
+    c2, t2 = sp.extract_value('Transactions', 'odroid/moodle_index')
+    fig, ax = plt.subplots()
+    ax.plot(c1,t1,'r',linewidth=2,label="standalone")
+    ax.plot(c2,t2,'b',linewidth=2,label="PHP only")
+    ax.legend(loc=7)
+    ax.set_xlabel('Level of Concurrency')
+    ax.set_ylabel('# of Transactions')
+    ax.set_title('Odroid as a standalone server and PHP server')
+    ax.set_ylim([0,1500])
+    fig.savefig('output/standalone.png')
+    
+def moodle_index_res():
+    c1, t1 = sp.extract_value('Response', 'odroid/standalone')
+    c2, t2 = sp.extract_value('Response', 'odroid/moodle_index')
+    c2 = [c-3 for c in c1]
+    c1 = [c-6 for c in c1]
+    fig, ax = plt.subplots()
+
+    ax.bar(c1,t1,color='r',width=3,label="standalone")
+    ax.bar(c2,t2,color='b',width=3,label="PHP only")
+    ax.legend(loc=3)
+    ax.set_xlabel('Level of Concurrency')
+    ax.set_ylabel('Response Time (sec)')
+    ax.set_title('Odroid as a standalone server and PHP server')
+    ax.set_ylim([0, 12])
+    fig.savefig('output/standalone_res.png')
+
 
 def main():
     #odroid_small_plot()
@@ -140,8 +169,9 @@ def main():
     #simple_php()
     #moodle_index()
     #moodle_index_2()
-    simple_php_max_res()
-
+    #simple_php_max_res()
+    #moodle_index_standalone_and_phpalone()
+    moodle_index_res()
 
 if __name__=="__main__":
     main()

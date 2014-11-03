@@ -16,7 +16,7 @@ do
     #sleep 10
     #echo Restart php-fpm
     #ssh root@192.168.100.2 'service php5-fpm restart'
-    sleep 20
+    sleep 30
 done
 
 echo Done!!!
