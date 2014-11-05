@@ -144,6 +144,24 @@ def moodle_index_standalone_and_phpalone():
     ax.set_ylim([0,1500])
     fig.savefig('output/standalone.png')
     
+def moodle_index_cluster():
+    c1, t1 = sp.extract_value('Transactions', 'odroid/standalone')
+    c2, t2 = sp.extract_value('Transactions', 'cluster/2-php-server')
+    #c3, t3 = sp.extract_value('Transactions', 'cluster/cluster-121')
+    #c4, t4 = sp.extract_value('Transactions', 'cluster/3-php-server')
+    fig, ax = plt.subplots()
+    ax.plot(c1,t1,'r',linewidth=2,label="Standalone Installation")
+    ax.plot(c2,t2,'b',linewidth=2,label="MySQL in Odroid (2 PHP server)")
+    #ax.plot(c3,t3,'g',linewidth=2,label="MySQL in Raspberry Pi (2 PHP server)")
+    #ax.plot(c4,t4,'y',linewidth=2,label="cluster3php")
+    
+    ax.legend(loc=0)
+    ax.set_xlabel('Level of Concurrency')
+    ax.set_ylabel('# of Transactions')
+    ax.set_title('Cluster capacity with Multiple PHP server')
+    ax.set_ylim([0,2500])
+    fig.savefig('output/clever_cluster.png')
+    
 def moodle_index_res():
     c1, t1 = sp.extract_value('Response', 'odroid/standalone')
     c2, t2 = sp.extract_value('Response', 'odroid/moodle_index')
@@ -153,7 +171,7 @@ def moodle_index_res():
 
     ax.bar(c1,t1,color='r',width=3,label="standalone")
     ax.bar(c2,t2,color='b',width=3,label="PHP only")
-    ax.legend(loc=3)
+    ax.legend(loc=0)
     ax.set_xlabel('Level of Concurrency')
     ax.set_ylabel('Response Time (sec)')
     ax.set_title('Odroid as a standalone server and PHP server')
@@ -171,7 +189,8 @@ def main():
     #moodle_index_2()
     #simple_php_max_res()
     #moodle_index_standalone_and_phpalone()
-    moodle_index_res()
+    #moodle_index_res()
+    moodle_index_cluster()
 
 if __name__=="__main__":
     main()

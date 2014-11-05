@@ -113,16 +113,54 @@ Impact of adding web frontend does not evidently influence transaction rate, whi
 We apply the same method to test database although fail to exhaust the resource on Odroid before running out CPU and memory on our testbed high-end machine, hence we conclud that database query does not limit a Moodle installation before expanding PHP capacity.
 
 \section{Scale Out to Eliminate Bottleneck}
-We propose following cluster with current hardware, combining both web service and SymmetricDS service discussed in chapter\ref{synch}, see Figure \ref{cluster}. 
-
-\begin{figure}[h]
+To benefit most from currently available hardwares, we propose to form a small scale cluster than can be easily scaled out to cope with an increase of users. Furthermore, we investigate multiple different formations to find out the most economical setting. An intuitive solution is to put different services in physically separated hardwares, as a structure shown in Figure \ref{naive_cluster_form}. Nginx server in Rapsberry Pi features both web server and load balancer with upstream PHP servers running in Odroid. To cope with the increase of users, this setting can be easily scaled out by simply adding more hardware for PHP processing.
+%TODO naive_cluster figure
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{cluster.jpeg}
-\caption{Cluster Structure}
-\label{cluster}
+\includegraphics[width=0.9\textwidth]{naive_cluster.jpeg}
+\caption{A naive form of cluster}
+\label{naive_cluster_form}
+\end{figure}
+Although, as we compare the Siege test result with a standalone installation where all services run in one Odroid, we encounter a slightly lower performance, which is even worsen after we add one more PHP server, see Figure \ref{naive_cluster}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{naive_cluster.png}
+\caption{The Performance of running Database in Raspberry Pi}
+\label{naive_cluster}
 \end{figure}
 
-The cluster can be easily scaled out to cope with the increase of users by simply adding more PHP server instances. Nginx as a reverse proxy can be configured to handle load balancing. To further boost web performance, we configure Nginx to cache frequently requested page hence reducing the load on PHP and database server.
+To further identify the cause, we siege the cluster with 100 simulated concurrent clietns and observe CPU usage of servers (CPU of Nginx server is far from full load hence left out in the result), the result is shown in Figure \ref{cpu_usage}. We deduce that most of CPU resource in database server is consumed by OS kernel to handle concurrent sockets.
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{cpusage_rpi.png}
+\caption{database}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{cpusage_odr.png}
+\caption{PHP}
+\end{subfigure}
+\caption{CPU usage of servers}
+\label{cpu_usage}
+\end{figure}
+Hence, database needs to be more closely coupled with PHP server, which results in the cluster formation in Figure \ref{good_cluster}. And the result meets our assumption that server capacity improves by adding extra PHP server, see Figure \ref{good_cluster_perf}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{clever_cluster.jpeg}
+\caption{A better form of cluster}
+\label{good_cluster}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{clever_cluster.png}
+\caption{Performance of cluster with multiple PHP servers}
+\label{good_cluster_perf}
+\end{figure}
+
+To further boost web performance, we configure Nginx to cache frequently requested page hence reducing the load on PHP and database server.
 
 
 
