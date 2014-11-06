@@ -69,8 +69,7 @@ operation. Many distributed systems have the ability to detect and recover from
 network partitioning, although it normally leads to a compromise of consistensy
 and content freshness. When a user request a page, Moodle loads all previliges of the user, generate pages accordingly and log the session. This results in uncacheble content and interaction-must logins.
 It has been proven that consistency, high availability and partition tolerence
-are impossible to be achieved at same time\cite{brewer2000towards}\cite{gilbert2002brewer}, necessary assumptions must
-be made according to the condition and needs.
+are impossible to be achieved at same time\cite{brewer2000towards}\cite{gilbert2002brewer}, necessary trade-off has to be made according to the condition and needs.
 
 %TODO Assumptions
 While the majority of web caching and content distribution techniques aim at
@@ -127,32 +126,62 @@ Application code rarely changes in our case and is always on-way synchronized fr
 %TODO file system
 
 \section{Multi-Master Database Synchronization} \label{database_sync}
-Database replication techniques has been intensively deployed over clusters and workstations for redundency and load balancing (Figure X).  A LAN is always assumed by most of database replication techniques, whereas database replicas across the WAN are desired to realize our goals. We prioritize availability by compromising on consistency, as long as the system can reach eventual consistency\ref{vogels2009eventually}. Offline operations on distributed databases implies simutaneous modification on the same entry, which result in conflict after reconnection. Techniques to detect and reconsile conflicts are studied and evaluated.
+Database replication techniques has been intensively deployed over clusters and workstations for redundency and load balancing (Figure X).  A LAN is always assumed by most of database replication techniques, whereas database replicas across the WAN are desired to realize our goals. We prioritize availability by compromising on consistency, as long as the system can reach eventual consistency\ref{vogels2009eventually}. Offline operations on distributed databases often encounter simutaneous modification on the same entry, which result in conflict after reconnection. Techniques to detect and reconsile conflicts are studied and evaluated.
 %TODO transaction process
 
-\subsection{Database Cluster}
-Firstly, several databases with native support for replication are studied.
-
-%TODO MySQL cluster figure
+\subsection{Database Cluster} \label{db_cluster}
 %CouchDB
 \textbf{CouchDB} \ref{couchdb} is an open source distributed database system developed in Apache. The most attractive feature of CouchDB is that it natively supports bi-directional synchronization among multiple database replicas and offline operations. When one replica is disconnected from the network, it retains autonomy and continues as a fully functional database from user point of view. Although, it fails to be our candidate since it is NoSQL database, whereas Moodle heavily relies on SQL calls and it will a significant task to modify Moodle to use NoSQL database.
 
+%MySQL native replication
+\textbf{MySQL Native Replication} is shipped with most of MySQL standard distributions that provide built-in functionalities to replicate databases. The synchronization is uni-directional that databases on master node are replicated to slave nodes. ALthough bidirectional synchronization can be achieved by creating loop in the topology. A simplest 2-nodes example can be found in Figure X. Node A and node B synchronize with each other by maintaining mutual dominance. A more complex scenario is shown in Figure X(b). Although, the synchronization can be easily broken by conflict and the reconciliations always require human intervention.
+To avoid insertion conflicts of auto-incremental keys, MySQL provides an option to increase incremental step. This feature is further discussed in section \ref{multi_master}
+
+%TODO MySQL repl figure
+
 %MySQL cluster
 \textbf{MySQL Cluster} \ref{mysqlcluster} is an open source distributed database system based on MySQL. It supports database sharding and duplicating. A typical use case of MySQL Cluster is shown in Figure X. Although, redundent copy of database can only be accessed with the presence of management master, and cannot be updated during network failures. Furthermore, database nodes are closely coupled with the assumption of LAN (low latency and high bandwidth).
+%TODO MySQL cluster figure
 
 \subsection{Middleware-based Repliation System}
 Several studies also proposed the approaches to solve database synchronization at middleware-level\ref{cecchetc} \ref{amza2003conflict} \ref{plattner2004ganymed}. C-JDBC \ref{cecchetc} is an Java implementation of RAIDb\ref{cecchet2005raidb}, aiming at a framework to manage heterogenous databases. With built-in functionality of scheduling transaction processes, C-JDBC is perceived by users as a single virtual database. Although, the system is still centrally managed and could not handle partitioned network. Ganymed middleware system\ref{plattner2004ganymed}, inspired by C-JDBC, achieves consistency by serializing update/write requests at master and propogating changes to replicas in a lazy fashion. Users see a consistent data state (snapshot isolation), even though stale might it be. The limitation of these two middleware is also clear, that no write can be served during network failures.
 
 
-\subsection{Multi-Master Sycnhronization System}
+\subsection{Multi-Master Sycnhronization System} 
 Similiar to MySQL Cluster Multi-Master setup, we found three state-of-the-art open source tools to the similiar end.
 \begin{itemize}
 \item \textbf{Galera}\cite{galera} is an open source synchronous database replication software developed to scale web application and provision high availability. It achieves consistency by optimistic locks and group communication. Galera is quorum-based and handles network partitioning by sacrificing the minority. Hence, Galera lacks the essencial features that we are seeking for and is out of consideration.
 \item \textbf{Tungsten}\cite{tungsten} replicates database asynchronously and allows loose consistency. Transactions are commited locally, and then propogated across all other nodes. Tungsten features offline operation and automatical recovery although it leave the responsibility of conflict avoidance completely to the application. Conflicts may disturbe replication and hard to trace.
-\item \textbf{SymmetricDS}\cite{symmetricds} is another open source asynchronous database replication management tool. It has several built-in rules to detect and reconsile conflicts. It can be configured flexibly to meet different needs, for example, have different courses store in different sites. Also, one appealing feature is that SymmetricDS support file synchronization as well. Figure X birefly illustrates how SymmetricDS works.
+\item \textbf{SymmetricDS}\cite{symmetricds} is another open source asynchronous database replication management tool. It has several built-in rules to detect and reconsile conflicts. It can be configured flexibly to meet different needs, for example, have different courses store in different sites. Also, one appealing feature is that SymmetricDS support file synchronization as well. Figure X birefly illustrates how SymmetricDS works and more details in terms of conflicts detection and reconsiliation are discussed in section \ref{multi_master}
 %TODO symmetricds figure
 \end{itemize}
-We can draw the conclusion from above comparison that SymmetricDS is closest to our critaria and can be properly extended to meet our requirements. In the following section, we explore SymmetricDS in details and propose an approach to extend it.
+We can conclude from above comparison that SymmetricDS is closest to our critaria and can be properly extended to meet our requirements. In the following section, we explore SymmetricDS in details and propose an approach to extend it.
 
-\subsection{Operational Transformation}
+\subsection{Conflicts Avoidance and Reconciliation} \label{multi_master}
+Before we start illustrating our approaches for conflict detection and resolution, several reasonable application-specific assumptions need to be made:
+\begin{enumerate}[label=\bfseries Assumption \arabic*:]
+\item No user will attempt to login into two different server simutaneously, thus the content belong to this user will not be modified at two different sites.
+\item Administration-related content is always synchronized through top-down approach, that is, user creation, deletion and modification are always synchronized in one-way.
+\item No local user will be able to reply to a post that is not propogated to this edge server yet.
+\item Volatile entries are not synchronized, such as cache and session.
+\item Deletion wins. And events that causally follow the deletion also get deleted. If users reply to a post on a remote server whereas the post gets deleted on central server, all replies will get deleted once converged.
+\end{enumerate}
+
+As introduced in section \ref{db_cluster}, insertion conflicts of primary keys can be avoided by setting different incremental steps, as long as the primary key is auto-incremented integer, see Figure X.
+%TODO auto-incremental key
+Thankfully, all Moodle database tables are designed to use auto-incremental keys as primary key. By configuring incremental step and SymmetricDS, we are able to achieve a naive mutually consistent system. Configuring SymmetricDS is nontrivial and requires constant observation. Appendix A describes a work flow of configuring SymmetricDS.
+
+Although, there are several major drawbacks of this design:
+\begin{itemize}
+\item It is not scalable. The incremental step limits the max number of servers in the system.
+\item It is blind to application. It does not check logical correctness of modification according to application, e.g. replies to a previously deleted thread can still be inserted into database.
+\end{itemize}
+
+To attack these problems, we examine the way SymmetricDS handles conflicts and propose an extension that is more flexible and tunable. SymmetricDS applies the concept of CVS (Concurrent Versions System) to detect conflicts at a granularity of table entry level. When a node propogates a change on one table entry, it sends the before-state of that entry along with the change. Upon receipt, remote node compares the current state of this entry and the history. If they differ, a conflict is detected. Even though conflict resolution is highly application-specific, SymmetricDS provides limited rules to resolve known types of conflicts.
+
+A SymmetricDS node can be configured to either actively pull from other nodes, or passively waiting for changes being pushed. While optimistic replications normally assume a negotiation phase while attempting a resolution, push and pull in SymmetricDS are independent from each other. Thus, conflicts resolution can be sometime confusing. For example, suppose a scenario in Figure X. Slave node is configured to push data to master while pulling changes from it. Since two operations are independent from each other, two replies to the same post are replaced by each other at two nodes, whereas the intention is to simply stack them.
+%TODO confusing conflict resolution rule figure
+
+To attain serializibility, several repliation systems applies a centralized algorithm that serialize all changes at master node and then propogate to slaves. Although, it often requires a closely connected system and can suffer from latency and disconnection. Inspired by Git\cite{} and Operational Transformation \cite{}, we propose a distributed work flow in Figure X where conflicts are resolved at edge server, similiar to the mechanism used in Dropbox\cite{dropbox}. Edge node always pull the master first before commiting any changes. 
+%TODO conflicts resolution work flow figure
 
