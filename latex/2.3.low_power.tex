@@ -4,13 +4,11 @@ Currently, we are exploring the possibilities of two platforms, namely Raspberry
 %TODO specification table
 In the following sections, we benchmark a variety of attributes of Odroid and Raspberry Pi. The objective is to clarify the capacity of these two platforms and an optimum form to run the web service. We test every component of a complete Moodle installation to identify the bottleneck of the application. Based on the results, we propose the optimum cluster solution that can be easily scaled out to serve more users.
 
-\section{Processor and Bandwidth Latency}
-
-
+%\section{Processor and Bandwidth Latency}
 \section{Benchmark of Web Components}
 To test components of a complete Moodle installation, we design a expirement in Figure X. Each part is respectively substituted with either Odroid or Raspberry Pi, and remaining parts are running on a high-end machine which is much more powerful than these two platforms, in order to put enough siege on the testing target. Furthermore, simulated requests are generated from high-end machine as well.
 
-\section{Web Frontend}
+\subsection{Web Frontend}
 Most of the websites today are powered by Apache due to its long history and abundant extensions. Although Apache relies on a processed-based manner to handle new connection, which has limited the scalability and concurrency. Nginx is an event-based reverse proxy that handles request asynchronizily. It addresses C10K problem from the beginning and focus on scalability.
 To determine which server runs better on a resource constraint platform, we benchmark Nginx and Apache on both platform to evaluate the throughput, level of concurrency and response delay. We use siege to generate workload and compare the performance of web server with two different type of object: small text file and large JPG file.
 We siege the server in following setting:
@@ -46,7 +44,7 @@ We siege the server in following setting:
 %TODO figure
 As shown if Figure \ref{static}, Nginx and Apache achieve comparable performance under a low level of concurrency, although Nginx outperforms Apache notebly when concurrency level increases. To be noticed, both web servers perform indistinguishably while serving large file. We observe fully occupied CPU in this specific test, which is due to intensive OS kernel processing of socket manipulation and packet tranfer. The impact of web server on the CPU is neglectable in this circumstance. Thus, expirement result in Figure \ref{static}(d) does not denote same performance of web servers.
 
-\section{PHP Processing}
+\subsection{PHP Processing}
 As a large PHP application, Moodle requires significant computational resources for PHP processing. Thus, a testbed is formed to benchmark PHP processing capacity of two platforms, see Figure X
 %TODO PHP benchmark testbed
 The inputs are two different PHP scripts:
@@ -109,7 +107,7 @@ As shown in Figure\ref{moodle_php_result}(a), transaction rate and availability 
 
 Impact of adding web frontend does not evidently influence transaction rate, which implies that PHP processing capacity is the limiting factor in one Moodle installation.
 
-\section{Database}
+\subsection{Database}
 We apply the same method to test database although fail to exhaust the resource on Odroid before running out CPU and memory on our testbed high-end machine, hence we conclud that database query does not limit a Moodle installation before expanding PHP capacity.
 
 \section{Scale Out to Eliminate Bottleneck}

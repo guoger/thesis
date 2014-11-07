@@ -1,0 +1,264 @@
+== 10
+** SIEGE 3.0.5
+** Preparing 10 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2262 hits
+Availability:		      100.00 %
+Elapsed time:		       59.74 secs
+Data transferred:	       11.34 MB
+Response time:		        0.26 secs
+Transaction rate:	       37.86 trans/sec
+Throughput:		        0.19 MB/sec
+Concurrency:		        9.97
+Successful transactions:        2262
+Failed transactions:	           0
+Longest transaction:	        5.16
+Shortest transaction:	        0.10
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 20
+** SIEGE 3.0.5
+** Preparing 20 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2249 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       11.27 MB
+Response time:		        0.53 secs
+Transaction rate:	       37.50 trans/sec
+Throughput:		        0.19 MB/sec
+Concurrency:		       19.88
+Successful transactions:        2249
+Failed transactions:	           0
+Longest transaction:	        5.22
+Shortest transaction:	        0.09
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 40
+** SIEGE 3.0.5
+** Preparing 40 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2246 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       11.26 MB
+Response time:		        1.05 secs
+Transaction rate:	       37.45 trans/sec
+Throughput:		        0.19 MB/sec
+Concurrency:		       39.31
+Successful transactions:        2246
+Failed transactions:	           0
+Longest transaction:	        5.17
+Shortest transaction:	        0.10
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 60
+** SIEGE 3.0.5
+** Preparing 60 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2189 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       10.97 MB
+Response time:		        1.60 secs
+Transaction rate:	       36.50 trans/sec
+Throughput:		        0.18 MB/sec
+Concurrency:		       58.53
+Successful transactions:        2189
+Failed transactions:	           0
+Longest transaction:	        5.21
+Shortest transaction:	        0.10
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 80
+** SIEGE 3.0.5
+** Preparing 80 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2195 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       11.00 MB
+Response time:		        2.11 secs
+Transaction rate:	       36.60 trans/sec
+Throughput:		        0.18 MB/sec
+Concurrency:		       77.30
+Successful transactions:        2195
+Failed transactions:	           0
+Longest transaction:	        6.62
+Shortest transaction:	        0.10
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 100
+** SIEGE 3.0.5
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2187 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       10.96 MB
+Response time:		        2.63 secs
+Transaction rate:	       36.46 trans/sec
+Throughput:		        0.18 MB/sec
+Concurrency:		       96.01
+Successful transactions:        2187
+Failed transactions:	           0
+Longest transaction:	        8.28
+Shortest transaction:	        0.09
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 120
+** SIEGE 3.0.5
+** Preparing 120 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2154 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       10.80 MB
+Response time:		        3.20 secs
+Transaction rate:	       35.91 trans/sec
+Throughput:		        0.18 MB/sec
+Concurrency:		      115.08
+Successful transactions:        2154
+Failed transactions:	           0
+Longest transaction:	        9.68
+Shortest transaction:	        0.10
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 140
+** SIEGE 3.0.5
+** Preparing 140 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2182 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       10.94 MB
+Response time:		        3.64 secs
+Transaction rate:	       36.38 trans/sec
+Throughput:		        0.18 MB/sec
+Concurrency:		      132.43
+Successful transactions:        2182
+Failed transactions:	           0
+Longest transaction:	       10.29
+Shortest transaction:	        0.11
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 160
+** SIEGE 3.0.5
+** Preparing 160 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2155 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       10.80 MB
+Response time:		        4.19 secs
+Transaction rate:	       35.93 trans/sec
+Throughput:		        0.18 MB/sec
+Concurrency:		      150.56
+Successful transactions:        2155
+Failed transactions:	           0
+Longest transaction:	       10.81
+Shortest transaction:	        0.31
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 180
+** SIEGE 3.0.5
+** Preparing 180 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2165 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       10.85 MB
+Response time:		        4.70 secs
+Transaction rate:	       36.10 trans/sec
+Throughput:		        0.18 MB/sec
+Concurrency:		      169.82
+Successful transactions:        2165
+Failed transactions:	           0
+Longest transaction:	       10.61
+Shortest transaction:	        0.33
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 200
+** SIEGE 3.0.5
+** Preparing 200 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2121 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       10.63 MB
+Response time:		        5.32 secs
+Transaction rate:	       35.36 trans/sec
+Throughput:		        0.18 MB/sec
+Concurrency:		      188.04
+Successful transactions:        2121
+Failed transactions:	           0
+Longest transaction:	       10.97
+Shortest transaction:	        0.47
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied

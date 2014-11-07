@@ -1,0 +1,321 @@
+== 10
+** SIEGE 3.0.5
+** Preparing 10 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2932 hits
+Availability:		      100.00 %
+Elapsed time:		       59.28 secs
+Data transferred:	       14.69 MB
+Response time:		        0.20 secs
+Transaction rate:	       49.46 trans/sec
+Throughput:		        0.25 MB/sec
+Concurrency:		        9.98
+Successful transactions:        2932
+Failed transactions:	           0
+Longest transaction:	        5.22
+Shortest transaction:	        0.12
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 20
+** SIEGE 3.0.5
+** Preparing 20 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2793 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       14.00 MB
+Response time:		        0.43 secs
+Transaction rate:	       46.57 trans/sec
+Throughput:		        0.23 MB/sec
+Concurrency:		       19.83
+Successful transactions:        2793
+Failed transactions:	           0
+Longest transaction:	        5.66
+Shortest transaction:	        0.14
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 40
+** SIEGE 3.0.5
+** Preparing 40 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2725 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       13.66 MB
+Response time:		        0.87 secs
+Transaction rate:	       45.43 trans/sec
+Throughput:		        0.23 MB/sec
+Concurrency:		       39.69
+Successful transactions:        2725
+Failed transactions:	           0
+Longest transaction:	        6.39
+Shortest transaction:	        0.13
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 60
+** SIEGE 3.0.5
+** Preparing 60 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2655 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       13.31 MB
+Response time:		        1.34 secs
+Transaction rate:	       44.26 trans/sec
+Throughput:		        0.22 MB/sec
+Concurrency:		       59.30
+Successful transactions:        2655
+Failed transactions:	           0
+Longest transaction:	        7.87
+Shortest transaction:	        0.13
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 80
+** SIEGE 3.0.5
+** Preparing 80 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2687 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       13.47 MB
+Response time:		        1.75 secs
+Transaction rate:	       44.80 trans/sec
+Throughput:		        0.22 MB/sec
+Concurrency:		       78.52
+Successful transactions:        2687
+Failed transactions:	           0
+Longest transaction:	        7.78
+Shortest transaction:	        0.13
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 100
+** SIEGE 3.0.5
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-\      done.
+
+Transactions:		        2869 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       14.38 MB
+Response time:		        2.05 secs
+Transaction rate:	       47.83 trans/sec
+Throughput:		        0.24 MB/sec
+Concurrency:		       98.00
+Successful transactions:        2869
+Failed transactions:	           0
+Longest transaction:	        7.59
+Shortest transaction:	        0.14
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 120
+** SIEGE 3.0.5
+** Preparing 120 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2654 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       13.30 MB
+Response time:		        2.64 secs
+Transaction rate:	       44.25 trans/sec
+Throughput:		        0.22 MB/sec
+Concurrency:		      116.97
+Successful transactions:        2654
+Failed transactions:	           0
+Longest transaction:	        8.76
+Shortest transaction:	        0.14
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 140
+** SIEGE 3.0.5
+** Preparing 140 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...-      done.
+
+Transactions:		        2820 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	       14.13 MB
+Response time:		        2.89 secs
+Transaction rate:	       47.02 trans/sec
+Throughput:		        0.24 MB/sec
+Concurrency:		      135.72
+Successful transactions:        2820
+Failed transactions:	           0
+Longest transaction:	       18.89
+Shortest transaction:	        0.13
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 160
+** SIEGE 3.0.5
+** Preparing 160 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: 405993216 select timed out: Connection timed out
+[[1;32malert[0m] socket: 254924544 select timed out: Connection timed out
+[[1;32malert[0m] socket: -668272896 select timed out: Connection timed out
+[[1;32malert[0m] socket: -349350144 select timed out: Connection timed out
+[[1;32malert[0m] socket: 145819392 select timed out: Connection timed out
+[[1;32malert[0m] socket: -609523968 select timed out: Connection timed out
+[[1;32malert[0m] socket: 338851584 select timed out: Connection timed out
+[[1;32malert[0m] socket: 632596224 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		        2454 hits
+Availability:		       99.68 %
+Elapsed time:		       59.98 secs
+Data transferred:	       12.30 MB
+Response time:		        3.59 secs
+Transaction rate:	       40.91 trans/sec
+Throughput:		        0.21 MB/sec
+Concurrency:		      146.98
+Successful transactions:        2454
+Failed transactions:	           8
+Longest transaction:	       23.35
+Shortest transaction:	        0.13
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 180
+** SIEGE 3.0.5
+** Preparing 180 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: -762108160 select timed out: Connection timed out
+[[1;32malert[0m] socket: -434792704 select timed out: Connection timed out
+[[1;32malert[0m] socket: -325687552 select timed out: Connection timed out
+[[1;32malert[0m] socket: -157833472 select timed out: Connection timed out
+[[1;32malert[0m] socket: 194660096 select timed out: Connection timed out
+[[1;32malert[0m] socket: -23550208 select timed out: Connection timed out
+[[1;32malert[0m] socket: -409614592 select timed out: Connection timed out
+[[1;32malert[0m] socket: -132655360 select timed out: Connection timed out
+[[1;32malert[0m] socket: -443185408 select timed out: Connection timed out
+[[1;32malert[0m] socket: 337336064 select timed out: Connection timed out
+[[1;32malert[0m] socket: 446441216 select timed out: Connection timed out
+[[1;32malert[0m] socket: 43591424 select timed out: Connection timed out
+[[1;32malert[0m] socket: -795678976 select timed out: Connection timed out
+[[1;32malert[0m] socket: 513582848 select timed out: Connection timed out
+[[1;32malert[0m] socket: -241760512 select timed out: Connection timed out
+[[1;32malert[0m] socket: -359258368 select timed out: Connection timed out
+[[1;32malert[0m] socket: 505190144 select timed out: Connection timed out
+[[1;32malert[0m] socket: -183011584 select timed out: Connection timed out
+[[1;32malert[0m] socket: 77162240 select timed out: Connection timed out
+[[1;32malert[0m] socket: -40335616 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		        2749 hits
+Availability:		       99.28 %
+Elapsed time:		       59.97 secs
+Data transferred:	       13.78 MB
+Response time:		        3.46 secs
+Transaction rate:	       45.84 trans/sec
+Throughput:		        0.23 MB/sec
+Concurrency:		      158.77
+Successful transactions:        2749
+Failed transactions:	          20
+Longest transaction:	       20.29
+Shortest transaction:	        0.14
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied
+== 200
+** SIEGE 3.0.5
+** Preparing 200 concurrent users for battle.
+The server is now under siege...[[1;32malert[0m] socket: 900839168 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1379223296 select timed out: Connection timed out
+[[1;32malert[0m] socket: 774948608 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1815643904 select timed out: Connection timed out
+[[1;32malert[0m] socket: 665843456 select timed out: Connection timed out
+[[1;32malert[0m] socket: 674236160 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1958319872 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1144227584 select timed out: Connection timed out
+[[1;32malert[0m] socket: 959588096 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2101651712 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1437972224 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1345652480 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2033854208 select timed out: Connection timed out
+[[1;32malert[0m] socket: 884053760 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1454757632 select timed out: Connection timed out
+[[1;32malert[0m] socket: 875661056 select timed out: Connection timed out
+[[1;32malert[0m] socket: 707806976 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1102264064 select timed out: Connection timed out
+[[1;32malert[0m] socket: 850482944 select timed out: Connection timed out
+[[1;32malert[0m] socket: 623879936 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1186191104 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1009944320 select timed out: Connection timed out
+[[1;32malert[0m] socket: -2093259008 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1177798400 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1463150336 select timed out: Connection timed out
+[[1;32malert[0m] socket: 2000283392 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1026729728 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1513506560 select timed out: Connection timed out
+[[1;32malert[0m] socket: 1479935744 select timed out: Connection timed out
+
+Lifting the server siege...-      done.
+
+Transactions:		        2618 hits
+Availability:		       98.90 %
+Elapsed time:		       59.97 secs
+Data transferred:	       13.12 MB
+Response time:		        3.84 secs
+Transaction rate:	       43.66 trans/sec
+Throughput:		        0.22 MB/sec
+Concurrency:		      167.49
+Successful transactions:        2618
+Failed transactions:	          29
+Longest transaction:	       24.29
+Shortest transaction:	        0.13
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
+[[1;33merror[0m] unable to create log file: Permission denied

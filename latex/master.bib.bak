@@ -777,6 +777,14 @@
   Url                      = {wiback.org}
 }
 
+@Misc{,
+  Title                    = {Dropbox Conflicts Resolution},
+  HowPublished             = {https://www.dropbox.com/developers/blog/48/how-the-datastore-api-handles-conflicts-part-1-basics-of-offline-conflict-handling},
+
+  Owner                    = {guoger},
+  Timestamp                = {2014.11.06}
+}
+
 @TechReport{pointtopic2013,
   Title                    = {World Broadband Statistics Q1 2013},
   Institution              = {Point Topic Ltd},
