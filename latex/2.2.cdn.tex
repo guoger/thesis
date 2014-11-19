@@ -1,5 +1,5 @@
 \chapter{Adapt to Frequent Network Failure and Limited Bandwidth}\label{sync}
-In this chapter, problems are further decomposed and analyzed. To prevent reinventing-the-wheel, a variety of possible solutions are proposed and investigated, whereas focus has been put on our unique requirements.
+In this chapter, problems are further decomposed and analyzed. To prevent reinventing-the-wheel, a variety of possible solutions are proposed and investigated, whereas focus has been put into our unique requirements.
 
 %Most of techniques today focus on reducing response time and improving concurrency, rather than offline operation and network partitioning. Even though major companies optimize their server architecture for miliseconds of faster, web service in rural areas is still a question of existance.
 
@@ -19,7 +19,7 @@ As introduced in section \ref{out_intro}, Moodle is deployed as underlying cours
 Moodle is a typical database-driven web application where all the pages are generated on-the-fly based on user request. The whole application is composed of three main components: 
 \begin{itemize}
 \item PHP source code, typically in \texttt{/var/www/moodle/}
-\item A database to store data or metadata including site configuration, student information, course details, events, etc.
+\item A database to store data or metadata including site configuration, student information, course details, events, etc. There exist volatile tables in Moodle database which store sessions and temparory information.
 \item A directory to store materials and resources, as well as cache and temparory files. Typically it is named as \texttt{moodledata/}
 \end{itemize}
 
@@ -37,10 +37,7 @@ server/proxy and has a certain amount of users associated with it.
 \end{figure}
 
 %What to store
-As simple as the model might be, components in it could be vastly heterogenous
-while mapping to different techniques. Content stored in a node can either be web objects,
-SQL replies, codes or even entire databases. Communication in between can also be
-based on a variety of protocols.
+As simple as the model might be, components in it could be vastly heterogenous if mapped to different techniques. Content stored in a node can either be web objects, SQL replies, codes or even entire databases. Communication in between can also be based on a variety of protocols.
 
 %Interactive session
 As an online learning platform, users do not only passivly accept information, but also interact with Moodle through forum, personal blogs and quiz. All the changes made by users must be stored and seen everywhere. Thus, the system should not be read-only under any circumstance.
@@ -67,8 +64,7 @@ While the majority of web caching and content distribution techniques aim at bet
 Lastly, to realize affordability, we mainly focus on open source techniques and free ware. Thankfully, many successful projects and tools have been made open source and publicly available. In the following sections of this chapter, we evaluate a variety of techniques against the criteria stated above and propose our solution based upon the conclusion. Several of potential solution are also tried out.
 
 
-\section{Survey on Techniques to enhance web performance}
-
+\section{Push Web Service to Edge}
 \subsection{Content Delivery Network}
 Content Delivery Network overlaps with Web Cache Proxy at the concept of pushing web content to users. A Content Delivery Network is a collaborative set of surrogate servers spanning the network, where web contents are mirrored\cite{pathan2008content}. Users will perceive a smaller latency while fetching content from a nearby CDN surrogate server rather than original web server. The essence of CDN is illustrated in Figure \ref{cdn}.
 
@@ -85,7 +81,7 @@ Since more and more web services are evolving to provide dynamic content, CDN al
 
 \subsection{Simple Web Caching}
 An intuitive and common solution for the problem of limited bandwidth is to cache popular web content locally, as illustrated in Figure \ref{with_cache}.
-A server-side web cache proxy typically sits in front of web server, attempting to serve user request with cached objects rather than triggering computational workload on web application. Web caching has been proven to be an effective approach to reduce bandwidth usage, user-perceived latency and loads on original server\cite{davison2001web}.
+A client-side web cache proxy is typically deployed in user local network, requesting web servers on behalf of users, and cache web objects for further references. Web caching has been proven to be an effective approach to reduce bandwidth usage, user-perceived latency and loads on original server\cite{davison2001web}.
 
 \begin{figure}[h]
 \centering
@@ -95,24 +91,50 @@ A server-side web cache proxy typically sits in front of web server, attempting 
 \label{with_cache}
 \end{figure}
 
-Web cache is greatly advantageous in our scenario that it does not require modification on web application, except that some TCP optimizations could be done between web cache proxy and web server frontend. Web cache proxy can continue serving requests if offline mode enabled, which also meets our requirements. The traffic between cache proxy and authentic server is standard HTTP request and response. The overhead and frequency of communication mainly depends on cache hit / cache miss ratio, expiration time and cache directory size.
+Web cache is greatly advantageous in our scenario that it does not require modification on web application, except that some TCP optimizations could be done between web cache proxy and web server frontend. Web cache proxy can continue serving requests with offline mode enabled, which also meets our requirements. The traffic between cache proxy and authentic server is standard HTTP request and response. The overhead and frequency of communication mainly depends on cache hit / cache miss ratio, expiration time and cache directory size.
 
-Although, all write traffic traverses cache proxy and goes to original server, which leads to a read-only system immediately when network disconnects. This is magnified when Moodle is taken into consideration, where user logins require interaction with original PHP code and database.
-%TODO screen shot
+Although, this solution encounters two major constraints in our case:
+\begin{itemize}
+\item Moodle pages are generated on-the-fly based on user information. Web cache cannot operate on its own during network failures, except for serving previously requested pages.
+\item Users are required to log in to browse. Thus, user-server interactions are always necessary, which also contradict with our purposes.
+\end{itemize}
 
 %One important feature of all web cache proxies is replacement strategy which invalidate caches and maintain freshness. A comprehensive survey of existing replacement strategy is presented in \cite{podlipnig2003survey}. However
 
-\subsection{Web Caching with Edge Server and Replication}
-To address the issue of dynamic content generation and client-server interaction, an intuitive and brute-force solution is to generate user-specific page at the edge. A comprehensive study of edge servers can be found in \cite{pathan2008content}. Four strategies are presented: (a) edge computing (b) content-aware caching (c) content-blind caching (d) data replication.
+\subsection{Page generation on Edge Server}
+To address the issue of dynamic content generation and client-server interaction, an intuitive and brute-force solution is to generate user-specific page at the edge. A comprehensive study of edge servers can be found in \cite{pathan2008content}. Four strategies are presented: (a) edge computing (b) content-aware caching (CAC) (c) content-blind caching (CBC) (d) data replication.
 %TODO replication figure
-In each of the strategy, the edge server attempts to reply user request on the behalf of original server with the information that is locally available. Edge computing still heavily relies on central database, hence out of our consideration. While CAC and CBC store partial database at the edge, data replication stores a complete copy of the database. When the size and complexity of database permit, data replication is desired since it outperforms other strategies in both response speed and offline operation. Although, it adds another layer of complexity to perform transaction processing and maintain the consistency through mutliple distributed databases. Techniques to achieve a consistent distributed database system are presented in section \ref{database_sync}.
+In each of the strategy, the edge server attempts to reply user request on the behalf of original server with the information that is locally available. Edge computing still heavily relies on central database, hence out of our consideration. While CAC and CBC store partial database at the edge, data replication stores a complete copy of the database.
+
+If the size and complexity of database permit, data replication is desired since it outperforms other strategies in both response speed and offline operation. Although, it adds another layer of complexity to perform transaction processing and maintain the consistency through mutliple distributed databases. Techniques to achieve a consistent distributed database system are presented in section \ref{database_sync}.
 
 Application code rarely changes in our case and is always one-way synchronized from original server, thus consistency can be relatively easy to achieve by periodically utilizing tools like rsync\cite{tridgell1999efficient}.
 
 %TODO file system
 
 \section{Multi-Master Database Synchronization} \label{database_sync}
-Database replication techniques has been intensively deployed over clusters and workstations for redundency and load balancing (Figure X).  A LAN is always assumed by most of database replication techniques, whereas database replicas across the WAN are desired to realize our goals. We prioritize availability by compromising on consistency, as long as the system can reach eventual consistency\cite{vogels2009eventually}. Offline operations on distributed databases often encounter simutaneous modification on the same entry, which result in conflict after reconnection. Techniques to detect and reconsile conflicts are studied and evaluated.
+As addressed previously, consistency, availability and partitioned-network cannot be accomplished at the same time, according to CAP theorem\ref{brewer2000towards}. Necessary trade-off has to be made to adapt to particular circumstance. Based on objectives defined previously, we prioritize availability and partitioned-network, while allowing loose consistency, as long as eventual consistency is guaranteed\ref{vogels2009eventually}. Pessimistic replication always guarantees consistent content perceived by users, thus widely adopted in distributed database system to enhance availability and performance. Although optimistic replication permits diverged databases, which is more suitable in our case. An exhaustive survey on optimistic replication is presented in \ref{saito2005optimistic}.
+
+Comprehensive theoretical researches have been made available although we find limited open source implementations that serve our purposes. We investigate several data replication technologies in this section based on following criteria:
+\begin{itemize}
+\item \textbf{Deployable over WAN}
+Most of distributed database system assumes a LAN environment, where delay and bandwidth do not evidently affect exchange of data among servers. Although in our case, databases are deployed over WAN, which is highly unreliable and network latency is not neglectable.
+
+\item \textbf{Serializibility}
+To achieve eventual consistency, concurrent changes made at different edge servers need to be serialized. Hence, an order of operations is extracted based on relations among them.
+
+\item \textbf{Conflict detection and reconsiliation}
+\end{itemize}
+
+ Several data replication technologies are investigated in this section in order to find a tool that requires minimum modifications to fit into our problem.
+
+Distributed database system is widely adopted in server clusters and workstations, as a mean to enhance performance and redundancy. Although LAN is normally assumed by most of database replication technologies. 
+
+
+
+
+
+%Database replication techniques has been intensively deployed over clusters and workstations for redundency and load balancing. A LAN is always assumed by most of database replication techniques, whereas database replicas across the WAN are desired to realize our goals. We prioritize availability by compromising on consistency, as long as the system can reach eventual consistency\cite{vogels2009eventually}. Offline operations on distributed databases often encounter simutaneous modification on the same entry, which result in conflict after reconnection. Techniques to detect and reconsile conflicts are studied and evaluated.
 %TODO transaction process
 
 \subsection{Database Cluster} \label{db_cluster}
