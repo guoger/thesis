@@ -144,7 +144,9 @@ To further identify the cause, we siege the cluster with 100 simulated concurren
 \caption{CPU usage of servers}
 \label{cpu_usage}
 \end{figure}
+
 Hence, database needs to be more closely coupled with PHP server, which results in the cluster formation in Figure \ref{good_cluster}. And the result meets our assumption that server capacity improves by adding extra PHP server, see Figure \ref{good_cluster_perf}
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{clever_cluster.jpeg}
@@ -157,8 +159,6 @@ Hence, database needs to be more closely coupled with PHP server, which results 
 \caption{Performance of cluster with multiple PHP servers}
 \label{good_cluster_perf}
 \end{figure}
-
-To further boost web performance, we configure Nginx to cache frequently requested page hence reducing the load on PHP and database server.
 
 
 

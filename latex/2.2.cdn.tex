@@ -113,33 +113,29 @@ Application code rarely changes in our case and is always one-way synchronized f
 %TODO file system
 
 \section{Multi-Master Database Synchronization} \label{database_sync}
-As addressed previously, consistency, availability and partitioned-network cannot be accomplished at the same time, according to CAP theorem\ref{brewer2000towards}. Necessary trade-off has to be made to adapt to particular circumstance. Based on objectives defined previously, we prioritize availability and partitioned-network, while allowing loose consistency, as long as eventual consistency is guaranteed\ref{vogels2009eventually}. Pessimistic replication always guarantees consistent content perceived by users, thus widely adopted in distributed database system to enhance availability and performance. Although optimistic replication permits diverged databases, which is more suitable in our case. An exhaustive survey on optimistic replication is presented in \ref{saito2005optimistic}.
+As addressed previously, consistency, availability and partitioned-network cannot be accomplished at the same time, according to CAP theorem\cite{brewer2000towards}. Necessary trade-off has to be made to adapt to particular circumstance. Based on objectives defined previously, we prioritize availability and partitioned-network, while allowing loose consistency, as long as eventual consistency is guaranteed\cite{vogels2009eventually}. Pessimistic replication always guarantees consistent content perceived by users, thus widely adopted in distributed database system to enhance availability and performance. Although optimistic replication permits diverged databases, which is more suitable in our case. An exhaustive survey on optimistic replication is presented in \cite{saito2005optimistic}.
 
 Comprehensive theoretical researches have been made available although we find limited open source implementations that serve our purposes. We investigate several data replication technologies in this section based on following criteria:
 \begin{itemize}
-\item \textbf{Deployment over WAN}
+\item \textbf{Deployment over WAN}\\
 Most of distributed database system assumes a LAN environment, where delay and bandwidth do not evidently affect exchange of data among servers. Although in our case, databases are deployed over WAN, which is highly unreliable and network latency is not neglectable.
 
-\item \textbf{Serializibility}
-To achieve eventual consistency, concurrent changes made at different edge servers need to be serialized. Hence, an order of operations is extracted based on relations among them.
+\item \textbf{Serializibility}\\
+To achieve eventual consistency, concurrent changes made at different edge servers need to be serialized. The technology is responsible to extract relations in between and populate them through all nodes.
 
-\item \textbf{Conflict detection and reconsiliation}
+\item \textbf{Conflict detection and reconsiliation}\\
+Conflict may occur while commiting concurrent changes that were made at edge servers. For example, two users may edit the same content, or one may delete one entry while another editing it. The technology should be capable of detecting and resolving these conflicts.
+
+\item \textbf{Minimum modification}\\
+In order to solve a practical problem with limited resources and budget, it is desired to rely on open source industrial level tools and extend it as less as possible. 
 \end{itemize}
-
- Several data replication technologies are investigated in this section in order to find a tool that requires minimum modifications to fit into our problem.
-
-Distributed database system is widely adopted in server clusters and workstations, as a mean to enhance performance and redundancy. Although LAN is normally assumed by most of database replication technologies. 
-
-
-
-
 
 %Database replication techniques has been intensively deployed over clusters and workstations for redundency and load balancing. A LAN is always assumed by most of database replication techniques, whereas database replicas across the WAN are desired to realize our goals. We prioritize availability by compromising on consistency, as long as the system can reach eventual consistency\cite{vogels2009eventually}. Offline operations on distributed databases often encounter simutaneous modification on the same entry, which result in conflict after reconnection. Techniques to detect and reconsile conflicts are studied and evaluated.
 %TODO transaction process
 
 \subsection{Database Cluster} \label{db_cluster}
 %CouchDB
-\textbf{CouchDB}\cite{couchdb} is an open source distributed database system developed in Apache. The most attractive feature of CouchDB is that it natively supports bi-directional synchronization among multiple database replicas and offline operations. When one replica is disconnected from the network, it retains autonomy and continues as a fully functional database from user point of view. Although, it fails to be our candidate since it is NoSQL database, whereas Moodle heavily relies on SQL calls and it will a significant task to modify Moodle to use NoSQL database.
+\textbf{CouchDB}\cite{couchdb} is an open source distributed database system developed in Apache. The most attractive feature of CouchDB is that it natively supports bi-directional synchronization among multiple database replicas and offline operations. When one replica is disconnected from the network, it retains autonomy and continues as a fully functional database from user point of view. Although, it fails to be our candidate since it is NoSQL database, whereas Moodle heavily relies on SQL calls and it is a significant task to modify Moodle to use NoSQL database.
 
 %MySQL native replication
 \textbf{MySQL Native Replication} is shipped with most of MySQL standard distributions that provide built-in functionalities to replicate databases. The synchronization is uni-directional that databases on master node are replicated to slave nodes. ALthough bidirectional synchronization can be achieved by creating loop in the topology. A simplest 2-nodes example can be found in Figure X. Node A and node B synchronize with each other by maintaining mutual dominance. The figure also shows a more complicated topology where three nodes comprise a loop. Although, the synchronization can be easily broken by conflict and the reconciliations always require human intervention.
@@ -210,8 +206,7 @@ Primary Key & Node A & Node B & Node C\\
 \label{mysql_key_inc}
 \end{table}
 
-
-Thankfully, all Moodle database tables are designed to use auto-incremental keys as primary key. By configuring incremental step and SymmetricDS, we are able to achieve a naive mutually consistent system. Configuring SymmetricDS is nontrivial and requires constant observation. Appendix A describes a work flow of configuring SymmetricDS.
+Thankfully, all Moodle database tables are designed to use auto-incremental keys as primary key. By configuring incremental step and SymmetricDS, we are able to achieve a naive mutually consistent system. Configuring SymmetricDS is a nontrivial job and requires constant observation. Appendix A describes a work flow of configuring SymmetricDS.
 
 Although, there are several major drawbacks of this design:
 \begin{itemize}
@@ -221,7 +216,7 @@ Although, there are several major drawbacks of this design:
 
 To attack these problems, we examine the way SymmetricDS handles conflicts and propose an extension that is more flexible and tunable. SymmetricDS applies the concept of CVS (Concurrent Versions System) to detect conflicts at a granularity of table entry level. When a node propogates a change on one table entry, it sends the before-state of that entry along with the change. Upon receipt, remote node compares the current state of this entry and the history. If they differ, a conflict is detected. Even though conflict resolution is highly application-specific, SymmetricDS provides limited rules to resolve known types of conflicts.
 
-A SymmetricDS node can be configured to either actively pull from other nodes, or passively waiting for changes being pushed. While optimistic replications normally assume a negotiation phase while attempting a resolution, push and pull in SymmetricDS are independent from each other. Thus, conflicts resolution can be sometime confusing. For example, suppose a scenario in Figure \ref{sym_confuse}. Slave node is configured to push data to master while pulling changes from it. Since two operations are independent from each other, two replies to the same post are replaced by each other at two nodes, whereas the intention is to simply stack them.
+A SymmetricDS node can be configured to either actively pull from other nodes, or passively waiting for changes being pushed. While optimistic replications normally assume a negotiation phase while attempting a resolution, push and pull in SymmetricDS are independent from each other. Thus, conflicts resolution can be sometime confusing. For example, suppose a scenario in Figure \ref{sym_confuse}. Slave node is configured to push data to master while pulling changes from it. Since two operations are independent from each other, two replies to the same post are swapped, although the intention is to simply stack over.
 
 \begin{figure}[htbp]
 \centering
@@ -230,6 +225,11 @@ A SymmetricDS node can be configured to either actively pull from other nodes, o
 \label{sym_confuse}
 \end{figure}
 
-To attain serializibility, several repliation systems applies a centralized algorithm that serialize all changes at master node and then propogate to slaves. Although, it often requires a closely connected system and can suffer from latency and disconnection. Inspired by Git and Operational Transformation \cite{ellis1989concurrency}, we propose a distributed work flow in Figure X where conflicts are resolved at edge server, similiar to the mechanism used in Dropbox\cite{dropbox}. Edge node always pull the master first before commiting any changes. 
-%TODO conflicts resolution work flow figure
+To attain serializibility, several repliation systems applies a centralized algorithm that serialize all changes at master node and then propogate to slaves. Although, it often requires a closely connected system and can suffer from latency and disconnection. Inspired by Git and Operational Transformation \cite{ellis1989concurrency}, we propose a distributed work flow in Figure \ref{ot_workflow} where conflicts are resolved at edge server, similiar to the mechanism used in Dropbox\cite{dropbox}.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{ot_workflow.jpeg}
+\caption{Distributed Conflict Resolution}
+\label{ot_workflow}
+\end{figure}
 
