@@ -458,6 +458,18 @@
   Pages                    = {3--32}
 }
 
+@Article{pentland2004daknet,
+  Title                    = {Daknet: Rethinking connectivity in developing nations},
+  Author                   = {Pentland, Alex and Fletcher, Richard and Hasson, Amir},
+  Journal                  = {Computer},
+  Year                     = {2004},
+  Number                   = {1},
+  Pages                    = {78--83},
+  Volume                   = {37},
+
+  Publisher                = {IEEE}
+}
+
 @InProceedings{plattner2004ganymed,
   Title                    = {Ganymed: Scalable replication for transactional web applications},
   Author                   = {Plattner, Christian and Alonso, Gustavo},
@@ -504,6 +516,18 @@
   __markedentry            = {[guoger:1]},
   Owner                    = {guoger},
   Timestamp                = {2014.10.15}
+}
+
+@Article{saito2005optimistic,
+  Title                    = {Optimistic replication},
+  Author                   = {Saito, Yasushi and Shapiro, Marc},
+  Journal                  = {ACM Computing Surveys (CSUR)},
+  Year                     = {2005},
+  Number                   = {1},
+  Pages                    = {42--81},
+  Volume                   = {37},
+
+  Publisher                = {ACM}
 }
 
 @Article{sivasubramanian2007analysis,
