@@ -1,7 +1,8 @@
-\chapter{Network Administration}
+\chapter{An Overview of SBN}
 In rural ICT development, technologies should be affordable and easy to use.
 %TODO some preface
-\section{An Overview of SBN}
+
+\section{Communication Technologies in Rural Development}
 Technology selection in rural ICT development is highly affected by physical environment and the demand of services. Conditions are often different from one site to another, hence not replicable in its entirety. As introduced in section \ref{related_proj}, Macha project represents a typical setting of rural ICT envrionment, while Nipel project serves as a good example of distribution of network. In this section, Four communication technologies are presented and evaluated against SBN environment.
 
 \textbf{Optical fiber links} are favorable due to its capacity and durability. Although deployment and maintainence require special tools and skills, and civil work involved is immense. Building a fiber line in rural area demands innovative cooperation to distibute risk and cost, as well as sharing the benefit. In the case of SBN development, during the time that Tanzania set up the power line between two districts, a 140km optical fiber link was also established along the power transmission line and owned by Tanzanian power company, TANESCO\footnote{http://www.tanesco.co.tz/}. The fiber was donated to ICT4RD in exchange for network connection. To distribute fiber backbone network, Low power routers that support both optical fiber and copper links are developed. More details can be found in section \ref{router}
@@ -12,7 +13,31 @@ Many rural ICT projects deploy \textbf{Very Small Aperture Terminals} to source 
 
 There exist novel and untraditional approaches in rural ICT development to link remote villiges, such as \textbf{Delay Tolerent Network} in DakNet\cite{pentland2004daknet}, which may physically transport bulk of data by vehicles. In spite of high bandwidth, latency introduced is not suitable for real-time applications such as video call.
 
-\section{Network Topology and Administration}
-
-
 \section{Key Challenges}
+Challenges in rural ICT development are different from that in urban areas and entail innovations in many ways. Some common obstacles such as poor supply chain, weak buying power and unsatisfactory knowledge base are also encountered by other projects. Although SBN comes across some unique requirements. We are able to identify following key challenges from the observation:
+\textit{Poor supply chain, especially power supply}
+Overall electrification rate in Tanzania is 14\% and less than 3\% in rural areas. Even at those sites where electricity is accessible, power outage is frequent and sometime harmful due to voltage surge. To power up electronic devices such as routers and transceivers, PV system is intensively deployed to source power from solar and deposit it into batteries that can be used over night.
+
+\textit{Weak knowledge base and lack of necessary skills}
+The lack of capable human resources to operate and maintain the network greatly limits the development. Although we find leadership and management skills more critical in rural development. The project is significantly blocked by the facts that managerial entities are slow in reaction and reluctant to collaborate. More of this topic can be found in \cite{nungu2011business} although the discussion of project organization and management is beyond the scope of this report.
+
+\textit{Harsh ambient environment}
+Due to limited budget and confined spaces, equipment boxes are often mounted on the pole along with the radio or fiber line, as depicted in Figure X.
+%TODO figure Nata box and buried battery
+
+Electronic devices and batteries are placed inside the box where the temperature is always unfavourably high during daytime. This is also the time when battery can be charged by solar power. Study shows that each 8\celsius rise in temperature cuts the life of a sealed lead acid battery in half\footnote{http://batteryuniversity.com/learn/article/how_heat_and_harsh_loading_reduces_battery_life}, whilst a temperature of 25\celsius is recommended.
+
+It is proposed to bury the battery in soil, where the temperature is constantly 25\celsius at 0.5m downward\cite{jager1982soils}. To further identify the condition, wireless sensors are deployed at Nata site to profile temperature in both box and soil, as shown in Figure X.
+%TODO sensor deployment and plot
+
+We plot one-week temperature with collected data, as represented in Figure X. Peak temperature in equipment box reaches 40\celsius, which confirms our presumption. Although soil temperature is stable at 35\celsius which contradicts the reference. More proper method to reduce battery operational temperature is yet to be explored.
+
+\textit{Poor buying power}
+As the overall objective is to digitalize under-served land, the fact of affordability problems is presupposed. Low cost off-the-shelf hardwares and open source software are chosen to cope with the limited budget. To gain a better price-performance ratio, we conduct a benchmark of several platforms in section \ref{sysdesign}.
+
+\textit{Sparse population density}
+In SBN, population to be covered spread over a vast area. This entails significant effort to backhaul network from those remote sites.
+
+\section{SBN Topology}
+An overview of SBN topology is shown in Figure X. A /24 subnetwork with prefix 41.93.124.x is allocated for the whole network. 
+
