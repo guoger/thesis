@@ -53,6 +53,31 @@ def rpi_big_plot():
     ax.set_title('Web server test by Transfering large file on Raspberry Pi')
     fig.savefig('output/rpi_big_jpg.png')
 
+def alix_small_plot():
+    c1, t1 = sp.extract_value('Transactions', 'alix/apache/small_text')
+    c2, t2 = sp.extract_value('Transactions', 'alix/nginx/small_text')
+    fig, ax = plt.subplots()
+    ax.plot(c1,t1,'r',linewidth=3,label="Apache")
+    ax.plot(c2,t2,'b',linewidth=3,label="Nginx")
+    ax.legend(loc=7)
+    ax.set_ylim([0, 20000])
+    ax.set_xlabel('Level of Concurrency')
+    ax.set_ylabel('# of Transactions')
+    ax.set_title('Web server test by Transfering small file on Alix Board')
+    fig.savefig('output/alix_small_text.png')
+
+def alix_big_plot():
+    c1, t1 = sp.extract_value('Transactions', 'alix/apache/big_jpg')
+    c2, t2 = sp.extract_value('Transactions', 'alix/nginx/big_jpg')
+    fig, ax = plt.subplots()
+    ax.plot(c1,t1,'r',linewidth=3,label="Apache")
+    ax.plot(c2,t2,'b',linewidth=3,label="Nginx")
+    ax.legend(loc=7)
+    ax.set_xlabel('Level of Concurrency')
+    ax.set_ylabel('# of Transactions')
+    ax.set_title('Web server test by Transfering large file on Alix Board')
+    fig.savefig('output/alix_big_jpg.png')
+
 def simple_php():
     c1, t1 = sp.extract_value('Transactions', 'rpi/simple_php')
     c2, t2 = sp.extract_value('Transactions', 'odroid/simple_php')
