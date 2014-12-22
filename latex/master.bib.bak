@@ -240,6 +240,13 @@
   Timestamp                = {2014.10.13}
 }
 
+@Book{jager1982soils,
+  Title                    = {Soils of the Serengeti woodlands, Tanzania},
+  Author                   = {Jager, Tjapko and others},
+  Publisher                = {Pudoc Wageningen},
+  Year                     = {1982}
+}
+
 @InProceedings{kemme2000don,
   Title                    = {Don't Be Lazy, Be Consistent: Postgres-R, A New Way to Implement Database Replication.},
   Author                   = {Kemme, Bettina and Alonso, Gustavo},

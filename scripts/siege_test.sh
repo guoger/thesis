@@ -16,9 +16,9 @@ do
     #sleep 10
     #echo Restart php-fpm
     #ssh root@192.168.100.2 'service php5-fpm restart'
-    sleep 10
-    echo restart apache server
-    ssh root@10.0.2.1 'service apache2 restart'
+    sleep 20
+    #echo restart apache server
+    #ssh root@10.0.2.1 'service apache2 restart'
 done
 
 echo Done!!!

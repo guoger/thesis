@@ -37,11 +37,10 @@ We siege the server in following setting:
 \includegraphics[width=\textwidth]{odroid_big_jpg.png}
 \caption{Odroid (big jpg file)}
 \end{subfigure}
-
 \caption{A Benchmark of static file request on both platforms}
 \label{static}
 \end{figure}
-%TODO figure
+
 As shown if Figure \ref{static}, Nginx and Apache achieve comparable performance under a low level of concurrency, although Nginx outperforms Apache notebly when concurrency level increases. To be noticed, both web servers perform indistinguishably while serving large file. We observe fully occupied CPU in this specific test, which is due to intensive OS kernel processing of socket manipulation and packet tranfer. The impact of web server on the CPU is neglectable in this circumstance. Thus, expirement result in Figure \ref{static}(d) does not denote same performance of web servers.
 
 \subsection{PHP Processing}
@@ -147,17 +146,21 @@ To further identify the cause, we siege the cluster with 100 simulated concurren
 
 Hence, database needs to be more closely coupled with PHP server, which results in the cluster formation in Figure \ref{good_cluster}. And the result meets our assumption that server capacity improves by adding extra PHP server, see Figure \ref{good_cluster_perf}
 
-\begin{figure}[htbp]
+\begin{figure}[h]
 \centering
-\includegraphics[width=0.9\textwidth]{clever_cluster.jpeg}
+\begin{subfigure}{0.7\textwidth}
+\centering
+\includegraphics[width=\textwidth]{clever_cluster.jpeg}
 \caption{A better form of cluster}
 \label{good_cluster}
-\end{figure}
-\begin{figure}[htbp]
+\end{subfigure}
+
+\begin{subfigure}{0.45\textwidth}
 \centering
-\includegraphics[width=0.5\textwidth]{clever_cluster.png}
+\includegraphics[width=\textwidth]{clever_cluster.png}
 \caption{Performance of cluster with multiple PHP servers}
 \label{good_cluster_perf}
+\end{subfigure}
 \end{figure}
 
 
