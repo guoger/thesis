@@ -12,11 +12,11 @@ do
     echo Concurrency: $i
     echo == $i >> $2
     siege -b -t1m -c$i $1 &>> $2
-    echo Stop, sleep for 10s
+    echo Stop, sleep for 120s
     #sleep 10
     #echo Restart php-fpm
     #ssh root@192.168.100.2 'service php5-fpm restart'
-    sleep 20
+    sleep 120
     #echo restart apache server
     #ssh root@10.0.2.1 'service apache2 restart'
 done
